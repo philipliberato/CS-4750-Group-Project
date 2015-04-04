@@ -1,0 +1,45 @@
+<html>
+<head>
+
+	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $(document).ready(function() {
+      $("#getAuthor").click(function() {
+          $.ajax({
+              url: 'lookup.php',
+              data: {AuthorName: $("#DoctorName").val()},
+              success: function(data){
+                  $('#results').html(data);   
+              }
+          });
+      });
+  });
+
+
+
+
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+<div class="form-group">
+      <label for="AuthorName">AuthorName</label>
+      <input type="text" class="form-control" id="DoctorName" name="DoctorName" placeholder="i.e. Gandhi">
+
+      <button type="button" class="btn btn-default" id="getAuthor">Submit</button>
+ </div>
+
+     <p id = "results"> Here </p>
+
+    </body>
+
+ </html>
