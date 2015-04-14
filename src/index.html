@@ -21,33 +21,21 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Hospital DB</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="DoctorsPage.html">Search</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="signin.html">Sign in</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+   
 
     <div class="container">
 
       <div class="starter-template">
-        <h1>Hospital base template</h1>
-        <p class="lead">CS4750 Database Systems: Semester Project</p>
-        <p><a href="DoctorsPage.html">PhpMyAdmin Query Page</a></p>
+        <h1>Welcome to General Hospital!</h1>
+        <p class="lead"><i>For emergencies, please call <b>911</b>.</i></p>
+        <br>
+		<button class="btn btn-lg btn-primary custom" onclick="wantsToSignIn()">Sign in</button>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <p id="homepageoptions"><a href="about.html">about us</a></p>
       </div>
 
     </div><!-- /.container -->
@@ -57,6 +45,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
+    
+    <script>
+		function wantsToSignIn() {
+			window.open("signin.html","_self")
+
+		}
+</script>
 
   </body>
 </html>
