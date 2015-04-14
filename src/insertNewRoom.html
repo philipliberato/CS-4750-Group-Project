@@ -1,0 +1,50 @@
+<html>
+<head>
+
+	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+
+
+  $(document).ready(function() {
+      $("#AddRoomNumber").click(function() {
+          $.ajax({
+              url: 'insertNewRoomLookup.php',
+              data: {RoomNumber: $("#RoomNumber").val()},
+              success: function(data){
+                  $('#results').html(data);   
+              }
+          });
+      });
+  });
+
+
+
+
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+
+ <div class="form-group">
+      <label for="RoomNumber">Add new Room number</label>
+      <input type="text" class="form-control" id="RoomNumber" name="RoomNumber" placeholder="Type in Room Number">
+      <button type="button" class="btn btn-default" id="AddRoomNumber">Add New Room</button>
+
+ </div>
+
+   <div id="results"> display</div>
+
+    <!-- <p class = "form-group"> Here </p> -->
+
+    </body>
+
+ </html>
