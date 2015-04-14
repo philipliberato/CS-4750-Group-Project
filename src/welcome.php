@@ -1,8 +1,16 @@
- <html>
+<?php
+include('session.php');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Home Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
-
+<div id="profile">
+<b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
+<b id="logout"><a href="logout.php">Log Out</a></b>
+</div>
 </body>
-</html> 
+</html>
