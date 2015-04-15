@@ -36,17 +36,17 @@ header("location: welcome.php");
 
     <div class="container">
 
-      <form class="form-signin" id="signupform">
+      <form class="form-signin" id="signupform" method="post">
         <h2 class="form-signin-heading" id="whiteFonts">Welcome back!</h2>
         <p id="whiteFonts"><i>Please fill in your login information below.</i></p>
         <br>
         <br>
-        <label for="inputEmail" class="sr-only">Email Address</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div id=buttonWidth width="50"></div>
-        <button class="btn btn-lg btn-primary btn-block" width="50" type="submit">Sign in</button>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only" >Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <input name="submit" type="submit" value=" Login ">
+        <span><?php echo $error; ?></span>
       </form>
 
     </div>
