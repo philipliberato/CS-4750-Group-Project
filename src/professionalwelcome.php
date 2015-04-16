@@ -45,7 +45,7 @@ mysqli_close($connection); // Closing Connection
         <div id="optionsDiv">
         <br>
         <br>
-	        <h4 align="center">What would you do like today?</h2>
+	        <h4 align="center">What would you like to do today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
 					<li id="active"><a href="#" id="current">View account information</a></li>

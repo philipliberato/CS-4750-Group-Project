@@ -3,4 +3,175 @@ body {
 	background-size: 100%;
 	background-color:rgba(0, 0, 0, 0.5);
     
+} 
+
+#leftHeader {
+	float: left;
+}
+
+#rightHeader {
+	float: right;
+	margin-right: 10px;
+}
+
+#logout {
+	text-decoration: none;
+	font-size: small;
+}
+
+#logo {
+	z-index: 20;
+	margin-left: 20px;
+	margin-top: 10px;
+	color: white;
+	position: absolute;
+	font-family: 'Rock Salt', cursive;
+	font-size: x-large;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#optionsDiv {
+	float: left;
+	height: 100%;
+	width: 20%;
+	min-height: 450px;
+	vertical-align: middle;
+	margin-left: 40px;
+
+}
+
+
+#resultDiv {
+	float: right;
+	height: 100%;
+	border: solid navy;
+	width: 72%;
+	min-height: 450px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	margin-left: 40px;
+
+}
+
+#resultTxt {
+	padding-left: 30px;
+}
+
+/*pretty manila folder */
+
+div#wrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; 
+    opacity: 0.9;       
+}
+
+div#header-title
+{
+    width: 40%;
+    background-color: white;
+    text-align: left;
+    padding-left: 5px;    
+    border: 1px solid #BBB;
+    border-bottom: 2px solid #fcefdc;
+    margin-bottom: -1px;
+    height: 45px;
+    vertical-align: middle;
+	color: navy;
+}
+
+div#content-container{
+    background-color: white;
+    border-top: 0.5px solid #BBB;
+    border-right: 2px solid #BBB;
+    border-bottom: 2px solid #BBB;
+    border-left: 0.5px solid #BBB;
+    min-height: 450px;
+    padding: 5px;
+    color: navy;
+    
+}
+
+.rounded-topright6{
+    border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -webkit-border-top-left-radius: 6px;
+}
+
+.rounded-topleft6{
+    border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-top-right-radius: 6px;
+}
+
+.rounded-bottomleft6{
+    border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+}
+
+.rounded-bottomright6{
+    border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+}
+
+
+/*navigation*/
+
+#navcontainer
+{
+
+
+margin: 0 auto;
+padding: 1em 0;
+font-family: georgia, serif;
+font-size: 13px;
+text-align: center;
+text-transform: lowercase;
+}
+
+ul#navlist
+{
+text-align: left;
+list-style: none;
+padding: 0;
+margin: 0 auto;
+width: 70%;
+}
+
+ul#navlist li
+{
+display: block;
+margin: 0;
+padding: 0;
+}
+
+ul#navlist li a
+{
+display: block;
+width: 100%;
+padding: 0.5em 0 0.5em 2em;
+border-width: 1px;
+border-color: #ffe #aaab9c #ccc #fff;
+border-style: solid;
+color: white;
+text-decoration: none;
+background: navy;
+}
+
+#navcontainer>ul#navlist li a { width: auto; }
+
+ul#navlist li#active a
+{
+background: white;
+color: navy;
+}
+
+ul#navlist li a:hover, ul#navlist li#active a:hover
+{
+color: navy;
+background: transparent;
+border-color: #aaab9c #fff #fff #ccc;
 }

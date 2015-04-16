@@ -23,16 +23,56 @@ mysqli_close($connection); // Closing Connection
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Home Page</title>
+<title>Welcome, <?php echo $patient_info[2]; ?>! </title>
 <link href="patient.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-<div id="profile">
-<b id="welcome">Welcome to General Hospital <?php echo $patient_info[2]; ?>. <i>What would you like to do today?</i></b>
-<br>
-<b id="logout"><a href="logout.php">Log Out</a></b>
 
+<div id="logo">General Hospital</div>
+<br>
+<div id="wrapper" align="right">
+    
+    <div id="header-title" class="rounded-topleft6 rounded-topright6">
+        <p class="rounded-topleft6 rounded-topright6">
+			<div id="leftHeader">Welcome to General Hospital, <?php echo $patient_info[2]; ?>. </div>
+            <div id="rightHeader"><a href="logout.php" id="logout">[Log out]</a></div>
+        </p>
+    </div>
+    
+    <div align="left" id="content-container" class="rounded-bottomleft6 rounded-bottomright6 rounded-topright6" style="overflow: hidden">
+        <div id="optionsDiv">
+        <br>
+        <br>
+	        <h4 align="center">How can we help you?</h2>
+	        <div id="navcontainer">
+				<ul id="navlist">
+					<li id="active"><a href="#" id="current">View account information</a></li>
+					<li><a href="#">Etcetera</a></li>
+					<li><a href="#">Item three</a></li>
+					<li><a href="#">Item four</a></li>
+					<li><a href="#">Item five</a></li>
+					</ul>
+		</div>
+        </div>
+        <div id="resultDiv">
+	        <br>
+	        <h3 id="resultTxt">Account Information</h3>
+	        <br>
+	        <br>
+	        <b id="resultTxt">Name:</b> <?php echo $patient_info[2]; ?> <?php echo $patient_info[3]; ?> 
+	        <br><br>
+	        <b id="resultTxt">Age:</b>
+	        <br><br>
+	        <b id="resultTxt">Phone Number:</b> <?php echo $patient_info[6]; ?>
+	        <br><br>
+	        <b id="resultTxt">Address:</b>
+	        
+        </div>
+    </div>    
 
 </div>
+
 </body>
 </html>

@@ -27,7 +27,7 @@ body {
 	position: absolute;
 	font-family: 'Rock Salt', cursive;
 	font-size: x-large;
-	text-shadow: 1px grey;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #optionsDiv {
