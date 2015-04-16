@@ -10,8 +10,8 @@ include('session.php');
         	
 session_start();// Starting Session
 
-$query = mysqli_query($connection, "select * from Patient where userid='$ref_id'");
-$patient_info = mysqli_fetch_row($query);
+$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
+$admin_info = mysqli_fetch_row($query);
 
 
 mysqli_close($connection); // Closing Connection
@@ -23,20 +23,22 @@ mysqli_close($connection); // Closing Connection
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Welcome, <?php echo $patient_info[2]; ?>! </title>
-<link href="patient.css" rel="stylesheet" type="text/css">
+<title>Welcome, <?php echo $admin_info[2]; ?></title>
+<link href="admin.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
 
-<div id="logo">General Hospital</div>
+<div id="logo">General Hospital <a style="color:#1b686e;">Admin</a></div>
 <br>
 <div id="wrapper" align="right">
     
     <div id="header-title" class="rounded-topleft6 rounded-topright6">
         <p class="rounded-topleft6 rounded-topright6">
-			<div id="leftHeader">Welcome to General Hospital, <?php echo $patient_info[2]; ?>. </div>
+			<div id="leftHeader">Welcome back,<b> <?php echo $admin_info[2]; ?></b>!
+			<br>
+			<div style="font-size: x-small;">With great power comes great responsibility. <b style="color: red;">Be careful.</b></div>
+			</div>
             <div id="rightHeader"><a href="logout.php" id="logout">[Log out]</a></div>
         </p>
     </div>
@@ -45,14 +47,14 @@ mysqli_close($connection); // Closing Connection
         <div id="optionsDiv">
         <br>
         <br>
-	        <h4 align="center">How can we help you?</h2>
+	        <h4 align="center">What would you do like today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
 					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Etcetera</a></li>
-					<li><a href="#">Item three</a></li>
-					<li><a href="#">Item four</a></li>
-					<li><a href="#">Item five</a></li>
+					<li><a href="#">Query Data</a></li>
+					<li><a href="#">Insert Data</a></li>
+					<li><a href="#">Update Data</a></li>
+					<li><a href="#">Delete Data</a></li>
 					</ul>
 		</div>
         </div>
@@ -61,22 +63,25 @@ mysqli_close($connection); // Closing Connection
 	        <h3 id="resultTxt">Account Information</h3>
 	        <br>
 	        <br>
-	        <b id="resultTxt">Name:</b> <?php echo $patient_info[2]; ?> <?php echo $patient_info[3]; ?> 
+	        <b id="resultTxt">Name:</b> <?php echo $admin_info[2]; ?> <?php echo $admin_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age:</b> <?php echo date_diff(date_create($patient_info[4]), date_create('today'))->y;?>
+	        <b id="resultTxt">Age:</b> <?php echo date_diff(date_create($admin_info[4]), date_create('today'))->y;?>
 	        <br><br>
-	        <b id="resultTxt">Phone Number:</b> <?php echo $patient_info[6]; ?>
+	        <b id="resultTxt">Email:</b> <?php echo $admin_info[5]; ?>
 	        <br><br>
-	        <b id="resultTxt">Address:</b> <?php echo $employee_info[7]; ?> <?php echo $employee_info[8]; ?>, <?php echo $employee_info[9]; ?>, <?php echo $employee_info[10]; ?> <?php echo $employee_info[11]; ?>
+	        <b id="resultTxt">Phone Number:</b> <?php echo $admin_info[6]; ?>
+	        <br><br>
+	        <b id="resultTxt">Address:</b> <?php echo $admin_info[7]; ?> <?php echo $admin_info[8]; ?>, <?php echo $admin_info[9]; ?>, VA
 	        
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-	<a id="aboutus" href="about.php">[about us]</a>
+    </div>    
 
 </div>
+
+  <br>
+    <br>
+    <br>
+    <a id="aboutus" href="about.php">[about us]</a> 
 
 </body>
 </html>
