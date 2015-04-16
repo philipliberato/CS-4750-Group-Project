@@ -1,0 +1,32 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+GRANT SELECT ON Room TO cs4750pnl8zpa;
+GRANT SELECT, UPDATE, INSERT ON Record TO cs4750pnl8zpa;
+GRANT SELECT ON Patient TO cs4750pnl8zpa;
+GRANT SELECT, INSERT, DELETE ON Occupies TO cs4750pnl8zpa;
+GRANT SELECT ON Nurse TO cs4750pnl8zpa;
+GRANT SELECT ON Receptionist TO cs4750pnl8zpa;
+GRANT SELECT ON Pharmacist TO cs4750pnl8zpa;
+GRANT SELECT ON Doctor TO cs4750pnl8zpa;
+GRANT SELECT ON Medication TO cs4750pnl8zpa;
+GRANT SELECT ON Department TO cs4750pnl8zpa;
+
+GRANT SELECT, UPDATE, INSERT, DELETE ON Medication TO cs4750pnl8zpb;
+GRANT SELECT ON Nurse TO cs4750pnl8zpb;
+GRANT SELECT ON Receptionist TO cs4750pnl8zpb;
+GRANT SELECT ON Pharmacist TO cs4750pnl8zpb;
+GRANT SELECT ON Doctor TO cs4750pnl8zpb;
+
+GRANT SELECT ON Room TO cs4750pnl8zpc;
+GRANT SELECT, UPDATE, INSERT ON Patient TO cs4750pnl8zpc;
+GRANT SELECT ON Occupies TO cs4750pnl8zpc;
+GRANT SELECT ON Nurse TO cs4750pnl8zpc;
+GRANT SELECT ON Receptionist TO cs4750pnl8zpc;
+GRANT SELECT ON Pharmacist TO cs4750pnl8zpc;
+GRANT SELECT ON Doctor TO cs4750pnl8zpc;
+GRANT SELECT ON Department TO cs4750pnl8zpc;
+
+GRANT SELECT ON Record TO cs4750pnl8zpd;
+GRANT SELECT ON Patient TO cs4750pnl8zpd;

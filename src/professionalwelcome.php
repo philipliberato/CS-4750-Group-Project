@@ -49,10 +49,10 @@ mysqli_close($connection); // Closing Connection
 	        <div id="navcontainer">
 				<ul id="navlist">
 					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Etcetera</a></li>
-					<li><a href="#">Item three</a></li>
-					<li><a href="#">Item four</a></li>
-					<li><a href="#">Item five</a></li>
+					<li><a href="#">Query Data</a></li>
+					<li><a href="#">Insert Data</a></li>
+					<li><a href="#">Update Data</a></li>
+					<li><a href="#">Delete Data</a></li>
 					</ul>
 		</div>
         </div>
@@ -63,7 +63,7 @@ mysqli_close($connection); // Closing Connection
 	        <br>
 	        <b id="resultTxt">Name:</b> <?php echo $employee_info[2]; ?> <?php echo $employee_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age:</b>
+	        <b id="resultTxt">Age: <?php echo $employee_info[4]; ?></b>
 	        <br><br>
 	        <b id="resultTxt">Email:</b> <?php echo $employee_info[5]; ?>
 	        <br><br>
