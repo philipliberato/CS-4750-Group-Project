@@ -63,7 +63,7 @@ mysqli_close($connection); // Closing Connection
 	        <br>
 	        <b id="resultTxt">Name:</b> <?php echo $patient_info[2]; ?> <?php echo $patient_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age:</b>
+	        <b id="resultTxt">Age:</b> <?php echo date_diff(date_create($patient_info[4]), date_create('today'))->y;?>
 	        <br><br>
 	        <b id="resultTxt">Phone Number:</b> <?php echo $patient_info[6]; ?>
 	        <br><br>
