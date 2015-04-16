@@ -23,16 +23,61 @@ mysqli_close($connection); // Closing Connection
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Home Page</title>
+<title>Welcome, <?php echo $admin_info[2]; ?></title>
 <link href="admin.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div id="profile">
-<b id="welcome">Hello, <?php echo $admin_info[2]; ?>.</b>
+
+<div id="logo">General Hospital <b>Admin</b></div>
 <br>
-<p>With great power comes great responsibility. <b style="color: red;">Be careful.</b></p>
-<br>
-<b id="logout"><a href="logout.php">Log Out</a></b>
+<div id="wrapper" align="right">
+    
+    <div id="header-title" class="rounded-topleft6 rounded-topright6">
+        <p class="rounded-topleft6 rounded-topright6">
+			<div id="leftHeader">Welcome back,<b> <?php echo $admin_info[2]; ?></b>!
+			<br>
+			<div style="font-size: x-small;">With great power comes great responsibility. <b style="color: red;">Be careful.</b></div>
+			</div>
+            <div id="rightHeader"><a href="logout.php" id="logout">[Log out]</a></div>
+        </p>
+    </div>
+    
+    <div align="left" id="content-container" class="rounded-bottomleft6 rounded-bottomright6 rounded-topright6" style="overflow: hidden">
+        <div id="optionsDiv">
+        <br>
+        <br>
+	        <h4 align="center">What would you do like today?</h2>
+	        <div id="navcontainer">
+				<ul id="navlist">
+					<li id="active"><a href="#" id="current">View account information</a></li>
+					<li><a href="#">Etcetera</a></li>
+					<li><a href="#">Item three</a></li>
+					<li><a href="#">Item four</a></li>
+					<li><a href="#">Item five</a></li>
+					</ul>
+		</div>
+        </div>
+        <div id="resultDiv">
+	        <br>
+	        <h3 id="resultTxt">Account Information</h3>
+	        <br>
+	        <br>
+	        <b id="resultTxt">Name:</b> <?php echo $admin_info[2]; ?> <?php echo $admin_info[3]; ?> 
+	        <br><br>
+	        <b id="resultTxt">Age:</b>
+	        <br><br>
+	        <b id="resultTxt">Email:</b> <?php echo $admin_info[5]; ?>
+	        <br><br>
+	        <b id="resultTxt">Phone Number:</b> <?php echo $admin_info[6]; ?>
+	        <br><br>
+	        <b id="resultTxt">Address:</b>
+	        
+        </div>
+    </div>    
+
 </div>
+
+
 </body>
 </html>
