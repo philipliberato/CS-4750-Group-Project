@@ -3,7 +3,6 @@ include('session.php');
 
 ?>
 
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,6 +13,7 @@ include('session.php');
 
     <!-- Custom styles for this template -->
     <link href="base-template.css" rel="stylesheet">
+	<link href="about.css" rel="stylesheet">
 
     <!-- JQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -22,30 +22,11 @@ include('session.php');
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Hospital DB</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="lookup.php">Search</a></li>
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="signin.php">Sign in</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+          <a id= "menu" href="index.html">[Home]</a> <a id="menu" href="signin.php">[Sign in]</a>
 
     <div class="container">
 
-      <div class="starter-template">
+      <div class="starter-template" style="color: white;">
         <h1>CS 4750 - Database Systems</h1>
         <p class="lead">Semester Project Contributors</p>
 	<p>Philip Liberato (pnl8zp)</p>
