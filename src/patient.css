@@ -2,7 +2,7 @@ body {
 	background: url('../img/patient-bg.png');
 	background-size: 100%;
 	background-color:rgba(0, 0, 0, 0.5);
-    
+    font-family: 'Helvetica';
 } 
 
 #leftHeader {
@@ -132,7 +132,7 @@ div#content-container{
 
 margin: 0 auto;
 padding: 1em 0;
-font-family: georgia, serif;
+font-family: 'Helvetica', sans-serif;
 font-size: 13px;
 text-align: center;
 text-transform: lowercase;
