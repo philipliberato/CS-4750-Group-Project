@@ -30,7 +30,7 @@ mysqli_close($connection); // Closing Connection
 </head>
 <body>
 
-<div id="logo">General Hospital <b>Professional</b></div>
+<div id="logo">General Hospital <u>Professional</u></div>
 <br>
 <div id="wrapper" align="right">
     
