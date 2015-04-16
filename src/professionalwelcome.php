@@ -42,8 +42,36 @@ mysqli_close($connection); // Closing Connection
     </div>
     
     <div align="left" id="content-container" class="rounded-bottomleft6 rounded-bottomright6 rounded-topright6" style="overflow: hidden">
-        <div id="optionsDiv"></div>
-        <div id="resultDiv"></div>
+        <div id="optionsDiv">
+        <br>
+        <br>
+	        <h4 align="center">What would you do like today?</h2>
+	        <div id="navcontainer">
+				<ul id="navlist">
+					<li id="active"><a href="#" id="current">View account information</a></li>
+					<li><a href="#">Etcetera</a></li>
+					<li><a href="#">Item three</a></li>
+					<li><a href="#">Item four</a></li>
+					<li><a href="#">Item five</a></li>
+					</ul>
+		</div>
+        </div>
+        <div id="resultDiv">
+	        <br>
+	        <h3 id="resultTxt">Account Information</h3>
+	        <br>
+	        <br>
+	        <b id="resultTxt">Name:</b> <?php echo $employee_info[2]; ?> <?php echo $employee_info[3]; ?> 
+	        <br><br>
+	        <b id="resultTxt">Age:</b>
+	        <br><br>
+	        <b id="resultTxt">Email:</b> <?php echo $employee_info[5]; ?>
+	        <br><br>
+	        <b id="resultTxt">Phone Number:</b> <?php echo $employee_info[6]; ?>
+	        <br><br>
+	        <b id="resultTxt">Address:</b>
+	        
+        </div>
     </div>    
 
 </div>
