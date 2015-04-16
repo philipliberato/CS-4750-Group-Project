@@ -31,8 +31,8 @@ if (isset($_POST['submit'])) {
 		if ($rows == 1) {
 			//user is at least correct logging in
 			$_SESSION['login_user'] = $username;
-	            
-			$uid = $q_info[1];
+	        $uid = $q_info[1];
+			$_SESSION['usid'] = $uid;
 			$emp_chk = mysqli_query($connection, "select * from Employee where userid='$uid'");
 			$e_info = mysqli_fetch_row($emp_chk);
 			$emp_row = mysqli_num_rows($emp_chk);

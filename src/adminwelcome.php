@@ -1,6 +1,20 @@
 <?php
 include('session.php');
 
+        $connection = mysqli_connect("stardock.cs.virginia.edu", "cs4750pnl8zp", "hospital", "cs4750pnl8zp");
+        if (!$connection) {
+	        //echo "connection failed";
+        } else {
+        	//echo "connection successful";
+        	}
+        	
+session_start();// Starting Session
+
+$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
+$admin_info = mysqli_fetch_row($query);
+
+
+mysqli_close($connection); // Closing Connection
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +28,10 @@ include('session.php');
 </head>
 <body>
 <div id="profile">
-<b id="welcome">Welcome admin : <i><?php echo $login_session; ?></i> with permission <i><?php echo $permission; ?></i></b>
+<b id="welcome">Hello, <?php echo $admin_info[2]; ?>.</b>
+<br>
+<p>With great power comes great responsibility. <b style="color: red;">Be careful.</b></p>
+<br>
 <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
 </body>
