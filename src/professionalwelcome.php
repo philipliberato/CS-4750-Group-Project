@@ -24,14 +24,30 @@ mysqli_close($connection); // Closing Connection
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Home Page</title>
+<title>Welcome, <?php echo $employee_info[2]; ?></title>
 <link href="professional.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div id="profile">
-<b id="welcome">Welcome back, <?php echo $employee_info[2]; ?></b>!
+
+<div id="logo">General Hospital</div>
 <br>
-<b id="logout"><a href="logout.php">Log Out</a></b>
+<div id="wrapper" align="right">
+    
+    <div id="header-title" class="rounded-topleft6 rounded-topright6">
+        <p class="rounded-topleft6 rounded-topright6">
+			<div id="leftHeader">Welcome back,<b> <?php echo $employee_info[2]; ?></b>!</div>
+            <div id="rightHeader"><a href="logout.php" id="logout">[Log out]</a></div>
+        </p>
+    </div>
+    
+    <div align="left" id="content-container" class="rounded-bottomleft6 rounded-bottomright6 rounded-topright6" style="overflow: hidden">
+        <div id="optionsDiv"></div>
+        <div id="resultDiv"></div>
+    </div>    
+
 </div>
+
+
 </body>
 </html>

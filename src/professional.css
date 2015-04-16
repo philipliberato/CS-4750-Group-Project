@@ -1,6 +1,89 @@
 body {
 	background: url('../img/employee-bg.png');
 	background-size: 100%;
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color:rgba(0, 0, 0, 0.5); 
+	font-family: 'Helvetica';
+}  
+
+#leftHeader {
+	float: left;
+}
+
+#rightHeader {
+	float: right;
+	margin-right: 10px;
+}
+
+#logout {
+	text-decoration: none;
+	font-size: small;
+}
+
+#logo {
+	z-index: 20;
+	margin-left: 20px;
+	margin-top: 10px;
+	color: #fce1cd;
+	position: absolute;
+	font-family: 'Rock Salt', cursive;
+	font-size: x-large;
+	text-shadow: 1px grey;
+}
+
+div#wrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; 
+    opacity: 0.9;       
+}
+
+div#header-title
+{
+    width: 40%;
+    background-color: #fcefdc;
+    text-align: left;
+    padding-left: 5px;    
+    border: 1px solid #BBB;
+    border-bottom: 2px solid #fcefdc;
+    margin-bottom: -1px;
+    height: 45px;
+    vertical-align: middle;
+	color: #522402;
+}
+
+div#content-container{
+    background-color: #fcefdc;
+    border-top: 0.5px solid #BBB;
+    border-right: 2px solid #BBB;
+    border-bottom: 2px solid #BBB;
+    border-left: 0.5px solid #BBB;
+    min-height: 450px;
+    padding: 5px;
+    color: #522402;
     
+}
+
+.rounded-topright6{
+    border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -webkit-border-top-left-radius: 6px;
+}
+
+.rounded-topleft6{
+    border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-top-right-radius: 6px;
+}
+
+.rounded-bottomleft6{
+    border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+}
+
+.rounded-bottomright6{
+    border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-right-radius: 6px;
 }

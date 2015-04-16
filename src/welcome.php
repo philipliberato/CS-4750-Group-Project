@@ -31,6 +31,8 @@ mysqli_close($connection); // Closing Connection
 <b id="welcome">Welcome to General Hospital <?php echo $patient_info[2]; ?>. <i>What would you like to do today?</i></b>
 <br>
 <b id="logout"><a href="logout.php">Log Out</a></b>
+
+
 </div>
 </body>
 </html>
