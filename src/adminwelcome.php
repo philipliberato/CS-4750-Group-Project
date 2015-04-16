@@ -78,6 +78,10 @@ mysqli_close($connection); // Closing Connection
 
 </div>
 
+  <br>
+    <br>
+    <br>
+    <a id="aboutus" href="about.php">[about us]</a> 
 
 </body>
 </html>

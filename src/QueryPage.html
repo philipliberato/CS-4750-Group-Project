@@ -3,11 +3,42 @@
 
 	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script>
+
+<script>
+$( "#doctor" ).on( "click", function() {
+  $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+});
+</script>
+
+
+<form>
+  <div>
+    <input type="radio" name="person" value="lookup.php" id="lookup.php">
+    <label for="lookup">lookup</label>
+  </div>
+  <div>
+    <input type="radio" name="person" value="nurse" id="nurse">
+    <label for="nurse">Nurse</label>
+  </div>
+  <div>
+    <input type="radio" name="person" value="pharmacist" id="pharmacist">
+    <label for="pharmacist">pharmacist</label>
+  </div>
+  <div id="log"></div>
+</form>
+ 
+<script>
+$( "input" ).on( "click", function() {
+  $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+  var checked = $("checkbox selector").is(":checked");
+  alert('checked');
+});
+
   $(document).ready(function() {
       $("#getDoctor").click(function() {
+      
           $.ajax({
-              url: 'lookup.php',
+              url: checked.val(),
               data: {DoctorID: $("#DoctorID").val()},
               success: function(data){
                   $('#results').html(data);   
@@ -31,12 +62,11 @@
 
 
 
-<div class="form-group">
+<div class="form-group" id="log">
       <label for="DoctorID"> ID</label>
       <input type="text" class="form-control" id="DoctorID" name="DoctorID" placeholder="i.e. 1000">
 
       <button type="button" class="btn btn-default" id="getDoctor">Submit</button>
-     <label> <input id="doctor" type="checkbox" /> Doctor </label>
 
  </div>
 

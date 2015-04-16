@@ -19,6 +19,12 @@ body {
 	font-size: small;
 }
 
+#aboutus {
+	color: #fce1cd;
+	text-decoration: none !important;
+	margin-left: 20px;
+}
+
 #logo {
 	z-index: 20;
 	margin-left: 20px;
@@ -126,7 +132,7 @@ div#content-container{
 
 margin: 0 auto;
 padding: 1em 0;
-font-family: georgia, serif;
+font-family: 'Helvetica', sans-serif;
 font-size: 13px;
 text-align: center;
 text-transform: lowercase;

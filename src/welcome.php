@@ -70,7 +70,11 @@ mysqli_close($connection); // Closing Connection
 	        <b id="resultTxt">Address:</b>
 	        
         </div>
-    </div>    
+    </div>
+    <br>
+    <br>
+    <br>
+	<a id="aboutus" href="about.php">[about us]</a>
 
 </div>
 
