@@ -19,6 +19,12 @@ body {
 	font-size: small;
 }
 
+#aboutus {
+	color: white !important;
+	text-decoration: none !important;
+	margin-left: 20px;
+}
+
 #logo {
 	z-index: 20;
 	margin-left: 20px;
