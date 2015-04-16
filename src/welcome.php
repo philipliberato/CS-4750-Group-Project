@@ -10,7 +10,7 @@ include('session.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your Home Page</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="patient.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="profile">
