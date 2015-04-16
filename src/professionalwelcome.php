@@ -40,7 +40,7 @@ function loadInsertPage(){
 </head>
 <body>
 
-<div id="logo">General Hospital <u>Professional</u></div>
+<div id="logo">General Hospital <a style="color:#522402;">Professional</a></div>
 <br>
 <div id="wrapper" align="right">
     
@@ -73,13 +73,13 @@ function loadInsertPage(){
 	        <br>
 	        <b id="resultTxt">Name:</b> <?php echo $employee_info[2]; ?> <?php echo $employee_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age:</b>
+	        <b id="resultTxt">Age: </b><?php echo date_diff(date_create($employee_info[4]), date_create('today'))->y;?>
 	        <br><br>
 	        <b id="resultTxt">Email:</b> <?php echo $employee_info[5]; ?>
 	        <br><br>
 	        <b id="resultTxt">Phone Number:</b> <?php echo $employee_info[6]; ?>
 	        <br><br>
-	        <b id="resultTxt">Address:</b>
+	        <b id="resultTxt">Address:</b> <?php echo $employee_info[7]; ?> <?php echo $employee_info[8]; ?>, <?php echo $employee_info[9]; ?>, VA
 	        
         </div>
     </div>    

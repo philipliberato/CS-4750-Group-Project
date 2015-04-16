@@ -29,7 +29,7 @@ mysqli_close($connection); // Closing Connection
 </head>
 <body>
 
-<div id="logo">General Hospital <u>Admin</u></div>
+<div id="logo">General Hospital <a style="color:#1b686e;">Admin</a></div>
 <br>
 <div id="wrapper" align="right">
     
@@ -65,13 +65,13 @@ mysqli_close($connection); // Closing Connection
 	        <br>
 	        <b id="resultTxt">Name:</b> <?php echo $admin_info[2]; ?> <?php echo $admin_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age:</b>
+	        <b id="resultTxt">Age:</b> <?php echo date_diff(date_create($admin_info[4]), date_create('today'))->y;?>
 	        <br><br>
 	        <b id="resultTxt">Email:</b> <?php echo $admin_info[5]; ?>
 	        <br><br>
 	        <b id="resultTxt">Phone Number:</b> <?php echo $admin_info[6]; ?>
 	        <br><br>
-	        <b id="resultTxt">Address:</b>
+	        <b id="resultTxt">Address:</b> <?php echo $admin_info[7]; ?> <?php echo $admin_info[8]; ?>, <?php echo $admin_info[9]; ?>, VA
 	        
         </div>
     </div>    
