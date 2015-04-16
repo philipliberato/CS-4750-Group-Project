@@ -63,7 +63,7 @@ mysqli_close($connection); // Closing Connection
 	        <br>
 	        <b id="resultTxt">Name:</b> <?php echo $employee_info[2]; ?> <?php echo $employee_info[3]; ?> 
 	        <br><br>
-	        <b id="resultTxt">Age: <?php echo $employee_info[4]; ?></b>
+	        <b id="resultTxt">Age:</b>
 	        <br><br>
 	        <b id="resultTxt">Email:</b> <?php echo $employee_info[5]; ?>
 	        <br><br>
