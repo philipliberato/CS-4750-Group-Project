@@ -12,12 +12,15 @@ session_start();// Starting Session
 
 // Storing Session
 $user_check=$_SESSION['login_user'];
+$id_ck = $_SESSION['usid'];
+
 
 
 // SQL Query To Fetch Complete Information Of User
 $query = mysqli_query($connection, "select * from User where username='$user_check'");
 $row = mysqli_fetch_assoc($query);
 $login_session =$row['Username'];
+$permission=$_SESSION['acct_type']; 
 
 if(!isset($login_session)){
 mysqli_close($connection); // Closing Connection

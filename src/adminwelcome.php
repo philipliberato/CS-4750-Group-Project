@@ -14,7 +14,7 @@ include('session.php');
 </head>
 <body>
 <div id="profile">
-<b id="welcome">Welcome : <i><?php echo $login_session; ?></i> with permission <i><?php echo $permission; ?></i></b>
+<b id="welcome">Welcome admin : <i><?php echo $login_session; ?></i> with permission <i><?php echo $permission; ?></i></b>
 <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
 </body>

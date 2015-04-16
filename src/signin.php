@@ -2,7 +2,15 @@
 include('login.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: welcome.php");
+$atype = $_SESSION['acct_type'];
+if ($atype == 3) {
+	header("location: adminwelcome.php");
+} else if ($atype == 2) {
+	header("location: professionalwelcome.php");
+} else {
+	header("location: welcome.php");
+
+	}
 }
 ?>
 
