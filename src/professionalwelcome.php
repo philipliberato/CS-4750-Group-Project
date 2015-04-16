@@ -27,6 +27,16 @@ mysqli_close($connection); // Closing Connection
 <title>Welcome, <?php echo $employee_info[2]; ?></title>
 <link href="professional.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script>
+function loadQueryPage(){
+    $("#resultDiv").load('QueryPage.html');
+}
+</script>
+<script>
+function loadInsertPage(){
+    $("#resultDiv").load('insert_entry.html');
+}
+</script>
 </head>
 <body>
 
@@ -49,11 +59,11 @@ mysqli_close($connection); // Closing Connection
 	        <div id="navcontainer">
 				<ul id="navlist">
 					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Query Data</a></li>
-					<li><a href="#">Insert Data</a></li>
+					<li><a href="#" onclick="loadQueryPage()">Query Data</a></li>
+					<li><a href="#" onclick="loadInsertPage()">Insert Data</a></li>
 					<li><a href="#">Update Data</a></li>
 					<li><a href="#">Delete Data</a></li>
-					</ul>
+				</ul>
 		</div>
         </div>
         <div id="resultDiv">
@@ -75,10 +85,7 @@ mysqli_close($connection); // Closing Connection
     </div>    
 
 </div>
-  <br>
-    <br>
-    <br>
-	<a id="aboutus" href="about.php">[about us]</a>
+
 
 </body>
 </html>
