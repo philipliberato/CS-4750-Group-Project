@@ -27,14 +27,17 @@ mysqli_close($connection); // Closing Connection
 <title>Welcome, <?php echo $employee_info[2]; ?></title>
 <link href="professional.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
-function loadQueryPage(){
-    $("#resultDiv").load('QueryPage.html');
+function loadQueryPage() {
+    $("#resultDiv").load('choose_query_table.php');
 }
-</script>
-<script>
-function loadInsertPage(){
+function loadInsertPage() {
     $("#resultDiv").load('insert_entry.html');
+}
+function loadProfilePage() {
+    $("#resultDiv").load('ProfilePage.php');
 }
 </script>
 </head>
@@ -58,9 +61,9 @@ function loadInsertPage(){
 	        <h4 align="center">What would you like to do today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#" onclick="loadQueryPage()">Query Data</a></li>
-					<li><a href="#" onclick="loadInsertPage()">Insert Data</a></li>
+					<li id="active"><a href="#" id="current" onclick="loadProfilePage();">View account information</a></li>
+					<li><a href="#" onclick="loadQueryPage();">Query Data</a></li>
+					<li><a href="#" onclick="loadInsertPage();">Insert Data</a></li>
 					<li><a href="#">Update Data</a></li>
 					<li><a href="#">Delete Data</a></li>
 				</ul>
