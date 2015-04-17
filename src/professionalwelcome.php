@@ -31,13 +31,19 @@ mysqli_close($connection); // Closing Connection
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 function loadQueryPage() {
-    $("#resultDiv").load('choose_query_table.php');
+    $("#resultDiv").load('choose_table.php?op=Query');
 }
 function loadInsertPage() {
-    $("#resultDiv").load('insert_entry.html');
+    $("#resultDiv").load('choose_table.php?op=Insert');
 }
 function loadProfilePage() {
     $("#resultDiv").load('ProfilePage.php');
+}
+function loadUpdatePage() {
+    $("#resultDiv").load('choose_table.php?op=Update');
+}
+function loadDeletePage() {
+    $("#resultDiv").load('choose_table.php?op=Delete');
 }
 </script>
 </head>
@@ -64,8 +70,8 @@ function loadProfilePage() {
 					<li id="active"><a href="#" id="current" onclick="loadProfilePage();">View account information</a></li>
 					<li><a href="#" onclick="loadQueryPage();">Query Data</a></li>
 					<li><a href="#" onclick="loadInsertPage();">Insert Data</a></li>
-					<li><a href="#">Update Data</a></li>
-					<li><a href="#">Delete Data</a></li>
+					<li><a href="#" onclick="loadUpdatePage();">Update Data</a></li>
+					<li><a href="#" onclick="loadDeletePage();">Delete Data</a></li>
 				</ul>
 		</div>
         </div>
