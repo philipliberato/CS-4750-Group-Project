@@ -79,13 +79,79 @@ function loadDeletePage() {
         </div>
         <div id="resultDiv">
 	        <br>
-	        <h3 id="resultTxt">Account Information</h3>
-	        <br>
-	        <br>
 		<?php
-	        echo "<h3 id=\"resultTxt\">"$Operation;
+	        echo "<h3 id=\"resultTxt\">$Operation - $Table</h3>";
 		echo "<br>";
-		echo $Table;
+
+		if($Operation == "Query") {
+
+		// Query Code goes here
+
+		} elseif($Operation == "Insert" || $Operation == "Update") {
+			switch ($Table) {
+		    	    case "Administrator":
+				echo "0";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Appointment":
+				echo "1";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Department":
+				echo "2";
+				$Labels = array("0", "1", "2");
+				break;
+		    	    case "Doctor":
+				echo "3";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Employee":
+				echo "4";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Medication":
+				echo "5";
+				$Labels = array("0", "1", "2");
+				break;
+		    	    case "Nurse":
+				echo "6";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Occupies":
+				echo "7";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Patient":
+				echo "8";
+				$Labels = array("0", "1", "2");
+				break;
+		    	    case "Pharmacist":
+				echo "9";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Receptionist":
+				echo "10";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "Record":
+				echo "11";
+				$Labels = array("0", "1", "2");
+				break;
+		    	    case "Room":
+				echo "12";
+				$Labels = array("0", "1", "2");
+				break;
+			    case "User":
+				echo "13";
+				$Labels = array("0", "1", "2");
+				break;
+			    default:
+				echo "default";
+			}
+		} else {
+		     echo "delete";
+		}
+
 	        ?>
         </div>
     </div>    
