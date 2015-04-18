@@ -32,9 +32,11 @@ function lookupCourse($DoctorID) {
   }
 }
 
-$coursePassedIn = $_GET["DoctorID"];
+$DoctorID = $_GET["DoctorID"];
+
+echo "$DoctorID";
 
 //lookupCourse($AuthorName);
-lookupCourse($coursePassedIn);
+lookupCourse($DoctorID);
 
 ?>

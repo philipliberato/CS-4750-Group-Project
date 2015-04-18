@@ -13,7 +13,7 @@ $( "#doctor" ).on( "click", function() {
 
 <form>
   <div>
-    <input type="radio" name="person" value="lookup.php" id="lookup.php">
+    <input type="radio" name="person" value="lookup" id="lookup">
     <label for="lookup">lookup</label>
   </div>
   <div>
@@ -31,14 +31,16 @@ $( "#doctor" ).on( "click", function() {
 $( "input" ).on( "click", function() {
   $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
   var checked = $("checkbox selector").is(":checked");
-  alert('checked');
 });
+</script>
 
+
+
+  <script>
   $(document).ready(function() {
       $("#getDoctor").click(function() {
-      
           $.ajax({
-              url: checked.val(),
+              url: 'lookup.php',
               data: {DoctorID: $("#DoctorID").val()},
               success: function(data){
                   $('#results').html(data);   
@@ -67,6 +69,7 @@ $( "input" ).on( "click", function() {
       <input type="text" class="form-control" id="DoctorID" name="DoctorID" placeholder="i.e. 1000">
 
       <button type="button" class="btn btn-default" id="getDoctor">Submit</button>
+     <label> <input id="doctor" type="checkbox"/> Doctor </label>
 
  </div>
 

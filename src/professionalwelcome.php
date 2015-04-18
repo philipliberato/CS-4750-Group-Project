@@ -45,6 +45,9 @@ function loadUpdatePage() {
 function loadDeletePage() {
     $("#resultDiv").load('choose_table.php?op=Delete');
 }
+function loadChangeInfoPage() {
+    $("#resultDiv").load('ChangePassword.html');
+}
 </script>
 </head>
 <body>
@@ -72,6 +75,7 @@ function loadDeletePage() {
 					<li><a href="#" onclick="loadInsertPage();">Insert Data</a></li>
 					<li><a href="#" onclick="loadUpdatePage();">Update Data</a></li>
 					<li><a href="#" onclick="loadDeletePage();">Delete Data</a></li>
+					<li><a href="#" onclick="loadChangeInfoPage();">Change password</a></li>
 				</ul>
 		</div>
         </div>

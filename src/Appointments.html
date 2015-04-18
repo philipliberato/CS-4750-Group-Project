@@ -1,0 +1,52 @@
+<html>
+<head>
+
+	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+
+ 
+<script>
+
+  $(document).ready(function() {
+      $("#getPatient").click(function() {
+      
+          $.ajax({
+              url: 'Appointments.php',
+              data: {patientID: $("#patientID").val()},
+              success: function(data){
+                  $('#results').html(data);   
+              }
+          });
+      });
+  });
+
+
+
+
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+<div class="form-group" id="log">
+      <label for="PatientID"> Patient ID</label>
+      <input type="text" class="form-control" id="patientID" name="patientID" placeholder="i.e. 1000">
+
+      <button type="button" class="btn btn-default" id="getPatient">Submit</button>
+
+ </div>
+
+     <table id = "results"> Here </table>
+    </body>
+
+ </html>
