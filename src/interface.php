@@ -81,72 +81,71 @@ function loadDeletePage() {
 	        <br>
 		<?php
 	        echo "<h3 id=\"resultTxt\">$Operation - $Table</h3>";
-		echo "<br>";
 
 		if($Operation == "Query") {
 
 		include "Appointments.php";
 
 		} elseif($Operation == "Insert" || $Operation == "Update") {
+			$Labels = array();
 			switch ($Table) {
 		    	    case "Administrator":
 				echo "need to figure out operations";
 				break;
 			    case "Appointment":
-				echo "1";
 				$Labels = array("DoctorID", "PatientID", "Date");
 				break;
 			    case "Department":
-				echo "2";
 				$Labels = array("0", "1", "2");
 				break;
 		    	    case "Doctor":
-				echo "3";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Employee":
-				echo "4";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Medication":
-				echo "5";
 				$Labels = array("0", "1", "2");
 				break;
 		    	    case "Nurse":
-				echo "6";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Occupies":
-				echo "7";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Patient":
-				echo "8";
 				$Labels = array("0", "1", "2");
 				break;
 		    	    case "Pharmacist":
-				echo "9";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Receptionist":
-				echo "10";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "Record":
-				echo "11";
 				$Labels = array("0", "1", "2");
 				break;
 		    	    case "Room":
-				echo "12";
 				$Labels = array("0", "1", "2");
 				break;
 			    case "User":
-				echo "13";
 				$Labels = array("0", "1", "2");
 				break;
 			    default:
 				echo "default";
 			}
+
+
+		echo "<form id=\"resultTxt\" action=\"#\" method=\"post\">";
+
+		foreach ($Labels as $label) {
+		    echo "<input type=\"text\" name=\"$label\"> $label<br><br>";
+		}
+
+		echo "<br><input type=\"submit\" value=\"Submit\">";
+		echo "</form>";
+
+
 		} else {
 		     echo "delete";
 		}
