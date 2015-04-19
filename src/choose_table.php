@@ -9,7 +9,10 @@ $table_names = array("Administrator", "Appointment", "Department", "Doctor", "Em
 
 // 
 
-echo "<form id=\"resultTxt\" action=\"interface.php?op=$Operation\" method=\"post\">";
+$Redirect = "interface.php?op=$Operation";
+// $Redirect = "Appointments.html";
+
+echo "<form id=\"resultTxt\" action=\"$Redirect\" method=\"post\">";
 
 foreach ($table_names as $value) {
     echo "<input id=\"resultTxt\" type=\"radio\" name=\"Table\" value=\"$value\">$value<br>";

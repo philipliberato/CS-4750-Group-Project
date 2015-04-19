@@ -38,6 +38,8 @@ $username = "cs4750pnl8zp";
 $password = "hospital";
 $dbname = "cs4750pnl8zp";
 
+echo $Table;
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -45,7 +47,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM User";
+$sql = "SELECT * FROM $Table";
 $result = $conn->query($sql);
 
 //echo "$result";

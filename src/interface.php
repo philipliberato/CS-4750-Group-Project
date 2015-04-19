@@ -85,17 +85,16 @@ function loadDeletePage() {
 
 		if($Operation == "Query") {
 
-		// Query Code goes here
+		include "Appointments.php";
 
 		} elseif($Operation == "Insert" || $Operation == "Update") {
 			switch ($Table) {
 		    	    case "Administrator":
-				echo "0";
-				$Labels = array("0", "1", "2");
+				echo "need to figure out operations";
 				break;
 			    case "Appointment":
 				echo "1";
-				$Labels = array("0", "1", "2");
+				$Labels = array("DoctorID", "PatientID", "Date");
 				break;
 			    case "Department":
 				echo "2";
