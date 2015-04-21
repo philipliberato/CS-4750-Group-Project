@@ -12,12 +12,7 @@ $reg = ($permission == 1);
 if($admin) {
     $table_names = array("Administrator", "Appointment", "Department", "Doctor", "Employee", "Medication", "Nurse", "Occupies", "Patient", "Pharmacist", "Receptionist", "Record", "Room", "User");
 }
-elseif($prof) {
-    $table_names = array("Appointment", "Department", "Doctor", "Medication", "Nurse", "Occupies", "Patient", "Pharmacist", "Receptionist", "Record", "Room");
-}
-elseif ($reg) {
-    $table_names = array("Appointment", "Department", "Occupies", "Patient", "Record");
-}
+if(
 
 // 
 
