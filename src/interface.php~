@@ -96,7 +96,7 @@ function loadDeletePage() {
 				$Labels = array("DoctorID", "PatientID", "Date");
 				break;
 			    case "Department":
-				$Labels = array("DepartmentName");
+				$Labels = array("0", "1", "2");
 				break;
 		    	    case "Doctor":
 				$Labels = array("0", "1", "2");

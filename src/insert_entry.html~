@@ -26,8 +26,6 @@
       <button type="button" class="btn btn-default" id="AddRoomNumber">Add New Room</button>
  </div>
 
-<br>
-
 <div class="form-group">
       <label for="Appointment">Add new appointment</label>
       <input type="text" class="form-control" id="DoctorID" name="DoctorID" placeholder="Type in Doctor ID">
