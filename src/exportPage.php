@@ -36,7 +36,7 @@ $table_names = array("Administrator", "Appointment", "Department", "Doctor", "Em
 
 
 foreach ($table_names as $value) {
-    echo "<input id=\"resultTxt\" type=\"radio\" name=\"Table\" value=\"$value\">$value<br>";
+    echo "<input id=\"resultTxt\" type=\"radio\" name=\"options\" value=\"$value\">$value<br>";
 }
 
 echo "<br><input type=\"submit\" value=\"Get Raw Data\" onclick=\"getRawData();\">";
@@ -53,7 +53,7 @@ echo "</form>";
 
 <script type=text/javascript>
 	function getRawData() {
-		var userChose = $('input[name=Table]:checked').val();
+		var userChose = $('input[name=options]:checked').val();
 		if (!userChose) {
 			userChose = 'Please select a table!';
 		} else {
@@ -62,9 +62,10 @@ echo "</form>";
 			
 			oReq.onload = function() {
 				userChose = this.responseText;
+				console.log("finished request, got: "+ userChose);
 			};
 			
-			oReq.open("get", "getXMLData.php", true);
+			oReq.open("get", "getXMLData.php", false);
 			oReq.send();
 		}
 		$('#rawData').val(userChose);
