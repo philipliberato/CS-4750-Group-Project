@@ -90,6 +90,7 @@ function loadDeletePage() {
 			$Labels = array();
 			switch ($Table) {
 		    	    case "Administrator":
+				/////////////////////////////////////
 				echo "need to figure out operations";
 				break;
 			    case "Appointment":
@@ -99,37 +100,43 @@ function loadDeletePage() {
 				$Labels = array("DepartmentName");
 				break;
 		    	    case "Doctor":
-				$Labels = array("0", "1", "2");
+				$Labels = array("EmployeeID", "Specialty", "LicenseNumber", "OnCall");
 				break;
 			    case "Employee":
-				$Labels = array("0", "1", "2");
+				// EmployeeID is auto_incremented in DB
+				$Labels = array("UserID", "FirstName", "LastName", "DateOfBirth", "Email", "PhoneNumber", "StreetNum", "StreetName", "City", "State", "Zip");
 				break;
 			    case "Medication":
-				$Labels = array("0", "1", "2");
+				$Labels = array("DrugName", "FDANumber");
 				break;
 		    	    case "Nurse":
-				$Labels = array("0", "1", "2");
+				$Labels = array("EmployeeID", "LicenseNo", "Department");
 				break;
 			    case "Occupies":
-				$Labels = array("0", "1", "2");
+				// OccupationNum is auto_increment in DB
+				$Labels = array("RoomNumber", "PatientID");
 				break;
 			    case "Patient":
-				$Labels = array("0", "1", "2");
+				// PatientID is auto_increment in DB
+				$Labels = array("UserID", "FirstName", "LastName", "DateOfBirth", "SSN", "PhoneNumber", "StreetNum", "StreetName", "City", "State", "Zip");
 				break;
 		    	    case "Pharmacist":
-				$Labels = array("0", "1", "2");
+				$Labels = array("EmployeeID", "LicenseNumber");
 				break;
 			    case "Receptionist":
-				$Labels = array("0", "1", "2");
+				$Labels = array("EmployeeID", "Department");
 				break;
 			    case "Record":
-				$Labels = array("0", "1", "2");
+				// RecordID is auto_increment in DB
+				$Labels = array("PatientID", "Visit Date (YYYY-MM-DD)", "Height", "Weight", "Blood Pressure");
 				break;
 		    	    case "Room":
-				$Labels = array("0", "1", "2");
+				$Labels = array("RoomNumber");
 				break;
 			    case "User":
-				$Labels = array("0", "1", "2");
+				// UserID is auto_increment in DB
+				// AccountCreationDate is timestamp
+				$Labels = array("Username", "Password");
 				break;
 			    default:
 				echo "default";
