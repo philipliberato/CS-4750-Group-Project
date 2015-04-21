@@ -70,12 +70,12 @@ function loadChangeInfoPage() {
 	        <h4 align="center">What would you like to do today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current" onclick="loadProfilePage();">View account information</a></li>
-					<li><a href="#" onclick="loadQueryPage();">Query Data</a></li>
-					<li><a href="#" onclick="loadInsertPage();">Insert Data</a></li>
-					<li><a href="#" onclick="loadUpdatePage();">Update Data</a></li>
-					<li><a href="#" onclick="loadDeletePage();">Delete Data</a></li>
+					<li id="active"><a href="#" id="current" onclick="loadProfilePage();">view account</a></li>
 					<li><a href="#" onclick="loadChangeInfoPage();">Change password</a></li>
+					<li><a href="#" onclick="loadQueryPage();">my patients</a></li>
+					<li><a href="#" onclick="loadInsertPage();">check-in patient</a></li>
+					<li><a href="#" onclick="loadUpdatePage();">check-out patient</a></li>
+					<li><a href="#" onclick="loadDeletePage();"> view on call status</a></li>
 				</ul>
 		</div>
         </div>
@@ -98,7 +98,10 @@ function loadChangeInfoPage() {
     </div>    
 
 </div>
-
+	 <br>
+    <br>
+    <br>
+    <a id="aboutus" href="about.php">[about us]</a> 
 
 </body>
 </html>

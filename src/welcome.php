@@ -48,11 +48,11 @@ mysqli_close($connection); // Closing Connection
 	        <h4 align="center">How can we help you?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Etcetera</a></li>
-					<li><a href="#">Item three</a></li>
-					<li><a href="#">Item four</a></li>
-					<li><a href="#">Item five</a></li>
+					<li id="active"><a href="#" id="current">View account</a></li>
+					<li><a href="#">change password</a></li>
+					<li><a href="#">view Available Rooms</a></li>
+					<li><a href="#">browse On-Call Doctors</a></li>
+					<li><a href="#">Contact Us</a></li>
 					</ul>
 		</div>
         </div>

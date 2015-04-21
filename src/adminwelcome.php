@@ -50,11 +50,11 @@ mysqli_close($connection); // Closing Connection
 	        <h4 align="center">What would you do like today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Query Data</a></li>
-					<li><a href="#">Insert Data</a></li>
-					<li><a href="#">Update Data</a></li>
-					<li><a href="#">Delete Data</a></li>
+					<li id="active"><a href="#" id="current">View account</a></li>
+					<li><a href="#">View Users</a></li>
+					<li><a href="#">add New Employee</a></li>
+					<li><a href="#">Remove Employee</a></li>
+					<li><a href="#">view Rooms</a></li>
 					</ul>
 		</div>
         </div>
