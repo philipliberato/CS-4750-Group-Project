@@ -56,8 +56,17 @@ echo "</form>";
 		var userChose = $('input[name=Table]:checked').val();
 		if (!userChose) {
 			userChose = 'Please select a table!';
+		} else {
+			console.log('userChose: '+ userChose);
+			var oReq = new XMLHttpRequest(); //New request object
+			
+			oReq.onload = function() {
+				userChose = this.responseText;
+			};
+			
+			oReq.open("get", "getXMLData.php", true);
+			oReq.send();
 		}
 		$('#rawData').val(userChose);
-		console.log('userChose: '+ userChose);
 	}
 </script>
