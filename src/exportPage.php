@@ -19,11 +19,40 @@ mysqli_close($connection); // Closing Connection
 
 ?>
 
-<br>
-<h3 id="resultTxt">Export Data & Information</h3>
-<br>
-<br>
-<p>Choose a table, then select export to get the raw data</p>
-<br>
-<br>
+<h3 id="resultTxt">Export Data & Information</h3<br>
+<h5 style="margin-left: 30px;">Choose a table, then select export to get the raw data</h5>
+<div id="exportDataWrapper">
+	<div id="e_chosen" style="float: left; width: 170px; margin-top: 0px; padding-left: 15px; padding-top: 0px;">
+		<!--start phpscript!-->
+		
+		<?php
+include('session.php');
 
+$Operation = $_GET["op"];
+
+echo "<p id=\"resultTxt\"> <i>Select Table</i></p>";
+
+$table_names = array("Administrator", "Appointment", "Department", "Doctor", "Employee", "Medication", "Nurse", "Occupies", "Patient", "Pharmacist", "Receptionist", "Record", "Room", "User");
+
+
+foreach ($table_names as $value) {
+    echo "<input id=\"resultTxt\" type=\"radio\" name=\"Table\" value=\"$value\">$value<br>";
+}
+
+echo "<br><input type=\"submit\" value=\"Get Raw Data\" onclick=\"getRawData();\">";
+echo "</form>";
+
+?>
+		
+		<!--end phpscript!-->
+	</div>
+	<div id="e_data" style="float: right; width: 75%; height:90%;">
+		<textarea id="rawData" rows="25" cols="80">Your export data will appear here.</textarea>
+	</div>
+</div>
+
+<script type=text/javascript>
+	function getRawData() {
+		$('#rawData').val('Raw Data');
+	}
+</script>

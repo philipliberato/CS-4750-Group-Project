@@ -183,3 +183,10 @@ color: #1b686e;
 background: transparent;
 border-color: #aaab9c #fff #fff #ccc;
 }
+
+/* exportData */
+
+#exportDataWrapper {
+	height: 400px;
+	width: 100%;
+}
