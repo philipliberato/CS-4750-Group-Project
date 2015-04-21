@@ -55,6 +55,7 @@ mysqli_close($connection); // Closing Connection
 					<li><a href="#">add New Employee</a></li>
 					<li><a href="#">Remove Employee</a></li>
 					<li><a href="#">view Rooms</a></li>
+					<li><a href="#">export data</a></li>
 					</ul>
 		</div>
         </div>
