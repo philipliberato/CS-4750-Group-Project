@@ -53,6 +53,11 @@ echo "</form>";
 
 <script type=text/javascript>
 	function getRawData() {
-		$('#rawData').val('Raw Data');
+		var userChose = $('input[name=Table]:checked').val();
+		if (!userChose) {
+			userChose = 'Please select a table!';
+		}
+		$('#rawData').val(userChose);
+		console.log('userChose: '+ userChose);
 	}
 </script>
