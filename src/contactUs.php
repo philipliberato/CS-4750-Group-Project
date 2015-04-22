@@ -1,6 +1,5 @@
 <div id="contactWrapper">
-<h1 style="margin:30px;">Contact Us</h1>
-<br>
+<h3 style="margin:30px;">Contact Us</h3>
 <br>
 <div style="color:navy; margin-left:30px;">
 	<p>
