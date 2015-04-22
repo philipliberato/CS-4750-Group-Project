@@ -11,7 +11,7 @@
               url: 'perscriptionpage.php',
               data: {DrugName: $("#DrugName").val(), FDANumber: $("#FDANumber").val()},
               success: function(data){
-                  $('#results').html("Drug added successfully");   
+                  $('#results').html(data);   
               }
           });
       });
@@ -27,10 +27,13 @@
 
 <br>
 
+<div id="results">
+<div id="resultTxt">
+
 <h2> Drug Inventory Form </h2>
 <p> Add a drug. </p>
 <br>
-<div class="form-group" id="resultTxt">
+<div class="form-group">
       <label for="DrugName"> Drug Name:  </label>
       <input type="text" class="form-control" id="DrugName" name="DrugName" placeholder="">
       <br>
@@ -42,10 +45,10 @@
       <button type="button" class="btn btn-default" id="postPerscription">Add Drug To Inventory</button>
  </div>
 
- <p id = "results">  </p>
+</div>
+</div>
 
-
-    <!-- <p class = "form-group"> Here </p> -->
+ <!-- <p id = "results">  </p> -->
 
     </body>
 

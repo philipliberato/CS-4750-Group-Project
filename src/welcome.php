@@ -29,6 +29,7 @@ if($permission < 6) {
 switch($permission) { // need to change some of the user IDs to employee IDs
      case 1:
 	// echo "admin";
+	$eString = "Administrator";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$admin_info = mysqli_fetch_row($query);
 	$adminOptions = array("View account", "View Users", "add New Employee", "Remove Employee", "View Rooms", "Export Data");
@@ -40,6 +41,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	break;
      case 2:
 	// echo "doctor";
+	$eString = "Doctor";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$doctor_info = mysqli_fetch_row($query);
 	$doctorOptions = array("View account", "change password", "my patients", "view on call status");
@@ -52,6 +54,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	break;
      case 3:
 	// echo "nurse";
+	$eString = "Nurse";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$nurse_info = mysqli_fetch_row($query);
 	$nurseOptions = array("View account", "change password");
@@ -63,6 +66,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	break;
      case 4:
 	// echo "pharmacist";
+	$eString = "Pharmacist";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$pharmacist_info = mysqli_fetch_row($query);
 	$pharmacistOptions = array("View account", "change password", "add drug to inventory");
@@ -74,6 +78,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	break;
      case 5:
 	// echo "receptionist";
+	$eString = "Receptionist";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$receptionist_info = mysqli_fetch_row($query);
 	$receptionistOptions = array("View account", "change password", "check in patient", "check out patient");
@@ -243,6 +248,7 @@ if($permission == 1) {
 	        echo "<b id=\"resultTxt\">Phone Number: </b>$patient_info[6]<br><br>";
 	        echo "<b id=\"resultTxt\">Address: </b> $patient_info[7] $patient_info[8] $patient_info[9], $patient_info[10] $patient_info[11]";
 	     } else {
+	        echo "<b id=\"resultTxt\">Employee Type: </b>$eString<br><br>";
 	        echo "<b id=\"resultTxt\">Email: </b>$employee_info[5]<br><br>";
 	        echo "<b id=\"resultTxt\">Phone Number: </b>$employee_info[6]<br><br>";
 	        echo "<b id=\"resultTxt\">Address: </b> $employee_info[7] $employee_info[8] $employee_info[9], $employee_info[10] $employee_info[11]";

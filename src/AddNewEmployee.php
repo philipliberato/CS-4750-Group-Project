@@ -68,14 +68,14 @@ $status = mysqli_query($con,"INSERT INTO User (Username) VALUES ('$Username')");
 	if($status) {
 		$UserID = mysqli_query($con,"SELECT * FROM User WHERE Username = '$Username'");
 		$UserID = mysqli_fetch_row($UserID);
-		echo $UserID[1];
+		// echo $UserID[1];
 		$status = $status && mysqli_query($con,"INSERT INTO Employee (UserID, FirstName, LastName) VALUES ('$UserID[1]', '$FirstName', '$LastName')");
 
 		if($status) {
 		$EmployeeID = mysqli_query($con,"SELECT * FROM Employee WHERE UserID = '$UserID[1]'");
 		$EmployeeID = mysqli_fetch_row($EmployeeID);
-		echo $EmployeeID[0];
-		$status = $status && mysqli_query($con,"INSERT INTO $EmployeeType (EmployeeID) VALUES ('$EmployeeID[0]')");
+		// echo $EmployeeID[0];
+		$status1 = $status && mysqli_query($con,"INSERT INTO $EmployeeType (EmployeeID) VALUES ('$EmployeeID[0]')");
 		}
 	}
 }
