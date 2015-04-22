@@ -1,0 +1,72 @@
+<html>
+<head>
+
+   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $(document).ready(function() {
+      $("#make").click(function() {
+          $.ajax({
+              url: 'CheckinPage.php',
+              data: {AppointmentID: $("#AppointmentID").val(), DoctorID: $("#DoctorID").val(),PatientID: $("#PatientID").val(), Date: $("#Date").val()},
+              success: function(data){
+                  $('#results').html("Appointment made!");   
+              }
+          });
+      });
+  });
+
+
+
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+
+
+<br>
+
+<div id="results">
+<div id="resultTxt">
+
+<h2> Checkin Page </h2>
+<p> Enter the details of the Appointment you wish to create. </p>
+<br>
+<div class="form-group">
+      <label for="AppointmentID">AppointmentID </label>
+      <input type="text" class="form-control" id="AppointmentID" name="AppointmentID" placeholder="include uppercase letters also">
+      <br>
+
+      <label for="DoctorID">DoctorID </label>
+      <input type="text" class="form-control" id="DoctorID" name="DoctorID" placeholder="include uppercase letters also">
+      <br>
+      <label for="PatientID">PatientID </label>
+      <input type="text" class="form-control" id="PatientID" name="PatientID" placeholder="include uppercase letters also">
+      <br>
+
+       <label for="Date">Date and Time! </label>
+      <input type="text" class="form-control" id="Date" name="Date" placeholder="2015-04-30 11:00:00">
+      <br><br>
+
+      <button type="button" class="btn btn-default" id="make">Make Appointment</button>
+ </div>
+
+</div>
+</div>
+
+ <!-- <p id = "results">  </p> -->
+
+
+
+
+
+    <!-- <p class = "form-group"> Here </p> -->
+
+    </body>
+
+ </html>

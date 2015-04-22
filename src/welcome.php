@@ -154,7 +154,7 @@ function loadViewUsersPage() { // scott
 function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
 }
-function loadRemoveEmployeePage() {
+function loadRemoveEmployeePage() { // philip
 	$("#resultDiv").load('RemoveEmployee.html');
 }
 function loadRoomsPage() { // ismail
@@ -173,7 +173,7 @@ function loadPerscriptionPage() { // scott
 	$("#resultDiv").load('perscriptionpage.html');
 }
 function loadCheckInPage() { // ismail
-// -----------------------------------------------------------------------------------------------------------------------------------------
+	$("#resultDiv").load('CheckinPage.html');
 }
 function loadCheckOutPage() { // ismail
 	$("#resultDiv").load('CheckoutPage.html');
