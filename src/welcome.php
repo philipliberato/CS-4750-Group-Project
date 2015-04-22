@@ -17,6 +17,7 @@ $connection = mysqli_connect("stardock.cs.virginia.edu", $admin, "hospital", "cs
 session_start(); // Starting Session
 
 $navOptions = array();
+$navLinks = array();
 $first_name = "FirstName";
 $last_name = "LastName";
 
@@ -76,7 +77,9 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Patient where userid='$ref_id'");
 	$patient_info = mysqli_fetch_row($query);
 	$patientOptions = array("View account", "change password", "view Available Rooms", "browse On-Call Doctors", "Contact Us");
+	$patientLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadAvailableRooms()", "loadOnCall()", "loadContactUs()");
 	$navOptions = $patientOptions;
+	$navLinks = $patientLinks;
 	$first_name = $patient_info[2];
 	$last_name = $patient_info[3];
 	break;
@@ -107,6 +110,28 @@ if($permission == 1) {
 } 
 ?>
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+function loadQueryPage() {
+    $("#resultDiv").load('choose_table.php?op=Query');
+}
+function loadInsertPage() {
+    $("#resultDiv").load('choose_table.php?op=Insert');
+}
+function loadProfilePage() {
+    $("#resultDiv").load('ProfilePage.php');
+}
+function loadUpdatePage() {
+    $("#resultDiv").load('choose_table.php?op=Update');
+}
+function loadDeletePage() {
+    $("#resultDiv").load('choose_table.php?op=Delete');
+}
+function loadChangeInfoPage() {
+    $("#resultDiv").load('ChangePassword.html');
+}
+</script>
 
 </head>
 <body>
@@ -132,8 +157,8 @@ echo "<div id=\"logo\">General Hospital<a style=\"color:#522402;\">$wordArt</a><
 	        <div id="navcontainer">
 				<ul id="navlist">
 				<?php
-				     foreach($navOptions as $option) {
-					echo "<li><a href=\"#\">$option</a></li>";
+				     for($i = 0; $i < sizeof($navOptions); $i++) {
+					echo "<li><a href=\"#\" onclick=\"$navLinks[$i];\">$navOptions[$i]</a></li>";
 				     }
 				?>
 					<!-- <li id="active"><a href="#" id="current">View account</a></li> -->
