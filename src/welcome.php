@@ -120,6 +120,7 @@ if($permission == 1) {
 } 
 ?>
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
@@ -233,7 +234,6 @@ echo "<div id=\"logo\">General Hospital<a style=\"color:#522402;\">$wordArt</a><
 	        echo "<b id=\"resultTxt\">Age: </b>";
 		echo date_diff(date_create($patient_info[4]), date_create('today'))->y;
 		echo "<br><br>";
-	        echo "<b id=\"resultTxt\">Email: </b>$patient_info[5]<br><br>";
 	        echo "<b id=\"resultTxt\">Phone Number: </b>$patient_info[6]<br><br>";
 	        echo "<b id=\"resultTxt\">Address: </b> $patient_info[7] $patient_info[8] $patient_info[9], $patient_info[10] $patient_info[11]";
 	     } else {
