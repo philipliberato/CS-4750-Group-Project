@@ -42,7 +42,7 @@
 <?php
 //$AuthorName = "Gandhi";
 
-$RoomNumber = $_GET["RoomNumber"];
+$RoomNumber = $_GET["EmployeeType"];
 
 $con=mysqli_connect('stardock.cs.virginia.edu', 'cs4750pnl8zp', 'hospital', 'cs4750pnl8zp');
 // Check connection
@@ -50,17 +50,21 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-
-
 // mysqli_query($con,"INSERT INTO Room VALUES ('$RoomNumber')";
 
+$status = NULL;
+$message = "Operation was not successful";
 
 if ($RoomNumber != NULL){
-mysqli_query($con,"INSERT INTO Room (RoomNumber)
-VALUES ('$RoomNumber')");
+$status = mysqli_query($con,"INSERT INTO Room (RoomNumber) VALUES ('$RoomNumber')");
 }
 
+if($status) { // query was successfull
+$message = "Operation was successful";
+}
 
+echo "<h3 id=\"resultTxt\">Operation Results</h3>";
+echo "<p id=\"resultTxt\">$message</p>";
 
 mysqli_close($con);
   

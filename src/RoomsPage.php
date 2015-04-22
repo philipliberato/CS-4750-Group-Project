@@ -27,14 +27,14 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
- echo "<table>";
+ echo "<br><table id=\"resultTxt\">";
        echo "<tr><th> RoomNumber </th></tr>";
        while($row = $result->fetch_assoc()) {
            echo "<tr>";
            echo("<td>" . $row["RoomNumber"] . "</td>\n");
            echo "</tr>";
        }
-       echo "</table>";
+       echo "</table><br>";
 
 }
 

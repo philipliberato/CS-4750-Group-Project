@@ -20,8 +20,8 @@ mysqli_close($connection); // Closing Connection
 
 echo '<h2 id="resultTxt">Users</h2><br>';
 
-echo "<table>";
-echo "<tr><th> UserName </th><th> User ID </th><th> Account Creation Date </th></tr>";
+echo "<table id=\"resultTxt\">";
+echo "<tr><th>UserName </th><th> User ID </th><th> Account Creation Date </th></tr>";
 while($row = $result->fetch_assoc()) {
    echo "<tr>";
    echo("<td>" . $row["Username"] . "</td>\n");
@@ -29,7 +29,7 @@ while($row = $result->fetch_assoc()) {
    echo("<td>" . $row["AccountCreationDate"] . "</td>\n");
    echo "</tr>";
 }
-echo "</table>";
+echo "</table><br>";
 
 ?>
 
