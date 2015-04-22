@@ -20,7 +20,11 @@ $employee_info = mysqli_fetch_row($query);
 
 $sql = "INSERT INTO Medication (DrugName, FDANumber) VALUES ('$drug_name', '$fdanumber')";
 
-$query = mysqli_query($connection, $sql);
+
+$query = NULL;
+if ($drug_name != NULL && $fdanumber != NULL) {
+	$query = mysqli_query($connection, $sql);
+}
 
 echo "<h3 id=\"resultTxt\">Operation Results</h3>";
 
