@@ -150,7 +150,7 @@ function loadViewUsersPage() { // scott
 
 }
 function loadAddEmployeePage() { // philip
-
+	$("#resultDiv").load('AddNewEmployee.html');
 }
 
 function loadRemoveEmployeePage() {

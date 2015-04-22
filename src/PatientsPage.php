@@ -18,11 +18,17 @@ $patients = mysqli_query($connection, $general);
 
 echo "<br><h3 id=\"resultTxt\">Your Patients</h3><br>";
 
+if(mysqli_num_rows($patients) > 0) {
+
 while($row = mysqli_fetch_array($patients)){
 	$lastN = $row[6];
 	$firstN = $row[5];
 	$date = $row[3];
 	echo "<b id=\"resultTxt\">Patient: </b>$lastN, $firstN - $date<br>";
+}
+
+} else {
+	echo "<p id=\"resultTxt\">You currently have no patients!</p><br>";
 }
 
 mysqli_close($connection); // Closing Connection
