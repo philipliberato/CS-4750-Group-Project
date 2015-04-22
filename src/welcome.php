@@ -193,7 +193,11 @@ function loadContactUsPage() { // raven
 <body>
 
 <?php
-echo "<div id=\"logo\">General Hospital<a style=\"color:#522402;\">$wordArt</a></div>";
+if($permission == 1) {
+	echo "<div id=\"logo\">General Hospital<a style=\"color:#1b686e;\">$wordArt</a></div>";
+} else {
+	echo "<div id=\"logo\">General Hospital<a style=\"color:#522402;\">$wordArt</a></div>";
+}
 ?>
 <br>
 <div id="wrapper" align="right">
