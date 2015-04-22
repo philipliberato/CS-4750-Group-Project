@@ -126,29 +126,25 @@ if($permission == 1) {
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script>
 function loadQueryPage() {
-    $("#resultDiv").load('choose_table.php?op=Query');
+    	$("#resultDiv").load('choose_table.php?op=Query');
 }
 function loadInsertPage() {
-    $("#resultDiv").load('choose_table.php?op=Insert');
+    	$("#resultDiv").load('choose_table.php?op=Insert');
 }
 function loadProfilePage() {
-    $("#resultDiv").load('ProfilePage.php');
+    	$("#resultDiv").load('ProfilePage.php');
 }
 function loadUpdatePage() {
-    $("#resultDiv").load('choose_table.php?op=Update');
+    	$("#resultDiv").load('choose_table.php?op=Update');
 }
 function loadDeletePage() {
-    $("#resultDiv").load('choose_table.php?op=Delete');
+    	$("#resultDiv").load('choose_table.php?op=Delete');
 }
 function loadChangeInfoPage() {
-    $("#resultDiv").load('ChangePassword.html');
+	$("#resultDiv").load('ChangePassword.html');
 }
 function loadViewUsersPage() { // scott
-<<<<<<< HEAD
-// -----------------------------------------------------------------------------------------------------------------------------------------
-=======
 	$("#resultDiv").load('viewusers.php');
->>>>>>> d945c9ba0144f96b6bce10463f060bb1f9f9ba3b
 }
 function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
@@ -169,11 +165,7 @@ function loadOnCallStatusPage() { // raven
 	$("#resultDiv").load('myStatus.php');
 }
 function loadPerscriptionPage() { // scott
-<<<<<<< HEAD
-// -----------------------------------------------------------------------------------------------------------------------------------------
-=======
 	$("#resultDiv").load('perscriptionpage.html');
->>>>>>> d945c9ba0144f96b6bce10463f060bb1f9f9ba3b
 }
 function loadCheckInPage() { // ismail
 // -----------------------------------------------------------------------------------------------------------------------------------------
