@@ -367,7 +367,7 @@ switch ($whichTable) {
 	
 		break;
 	default:
-		print("you picked nothing asshole");
+		print("table does not exist (somehow)");
 }
 
 mysqli_close($connection); // Closing Connection
