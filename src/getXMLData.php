@@ -353,7 +353,7 @@ switch ($whichTable) {
 			$user = $usera->addChild('User');
 			$user->addChild('Username', $data_admin[0]);
 			$user->addChild('UserID', $data_admin[1]);
-			$user->addChild('AccountCreationDate', $data_admin[1]);
+			$user->addChild('AccountCreationDate', $data_admin[2]);
 		}
 	
 		Header('Content-type: text/xml');
