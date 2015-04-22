@@ -1,0 +1,55 @@
+<html>
+<head>
+
+   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $(document).ready(function() {
+      $("#delete").click(function() {
+          $.ajax({
+              url: 'CheckoutPage.php',
+              data: {AppointmentID: $("#AppointmentID").val()},
+              success: function(data){
+                  $('#results').html("Appointment Deleted!");   
+              }
+          });
+      });
+  });
+
+
+
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+
+
+<br>
+
+<h2> Checkout Page </h2>
+<p> Enter the Appointment ID that you want to remove. </p>
+<br>
+<div class="form-group" id="resultTxt">
+      <label for="AppointmentID">AppointmentID </label>
+      <input type="text" class="form-control" id="AppointmentID" name="AppointmentID" placeholder="include uppercase letters also">
+      <br>
+
+      <button type="button" class="btn btn-default" id="delete">Delete Appointment</button>
+ </div>
+
+ <p id = "results">  </p>
+
+
+
+
+
+    <!-- <p class = "form-group"> Here </p> -->
+
+    </body>
+
+ </html>
