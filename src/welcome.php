@@ -48,6 +48,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$navLinks = $doctorLinks;
 	$first_name = $doctor_info[2];
 	$last_name = $doctor_info[3];
+	$_SESSION['employee_id'] = $doctor_info[0];
 	break;
      case 3:
 	// echo "nurse";
@@ -162,7 +163,7 @@ function loadExportDataPage() { // raven
 	$("#resultDiv").load('exportPage.php');
 }
 function loadPatientsPage() { // philip
-
+	$("#resultDiv").load('PatientsPage.php');
 }
 
 
@@ -179,7 +180,7 @@ function loadCheckOutPage() { // ismail
 
 }
 function loadAvailableRoomsPage() { // philip
-
+	$("#resultDiv").load('AvailableRoomsPage.php');
 }
 function loadOnCallPage() { // ismail
 
