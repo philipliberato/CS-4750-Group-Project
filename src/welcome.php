@@ -65,7 +65,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "pharmacist";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$pharmacist_info = mysqli_fetch_row($query);
-	$pharmacistOptions = array("View account", "change password", "make prescription");
+	$pharmacistOptions = array("View account", "change password", "add drug to inventory");
 	$pharmacistLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadPerscriptionPage()");
 	$navOptions = $pharmacistOptions;
 	$navLinks = $pharmacistLinks;
@@ -144,7 +144,11 @@ function loadChangeInfoPage() {
     $("#resultDiv").load('ChangePassword.html');
 }
 function loadViewUsersPage() { // scott
+<<<<<<< HEAD
 // -----------------------------------------------------------------------------------------------------------------------------------------
+=======
+	$("#resultDiv").load('viewusers.php');
+>>>>>>> d945c9ba0144f96b6bce10463f060bb1f9f9ba3b
 }
 function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
@@ -165,7 +169,11 @@ function loadOnCallStatusPage() { // raven
 	$("#resultDiv").load('myStatus.php');
 }
 function loadPerscriptionPage() { // scott
+<<<<<<< HEAD
 // -----------------------------------------------------------------------------------------------------------------------------------------
+=======
+	$("#resultDiv").load('perscriptionpage.html');
+>>>>>>> d945c9ba0144f96b6bce10463f060bb1f9f9ba3b
 }
 function loadCheckInPage() { // ismail
 // -----------------------------------------------------------------------------------------------------------------------------------------
