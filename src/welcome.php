@@ -32,7 +32,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$admin_info = mysqli_fetch_row($query);
 	$adminOptions = array("View account", "View Users", "add New Employee", "Remove Employee", "View Rooms", "Export Data");
-	$adminLinks = array("loadProfilePage()", "loadViewUsersPage()", "loadAddEmployeePage()", "loadRoomsPage()", "loadExportDataPage()");
+	$adminLinks = array("loadProfilePage()", "loadViewUsersPage()", "loadAddEmployeePage()", "loadRemoveEmployeePage()", "loadRoomsPage()", "loadExportDataPage()");
 	$navOptions = $adminOptions;
 	$navLinks = $adminLinks;
 	$first_name = $admin_info[2];
@@ -150,15 +150,21 @@ function loadViewUsersPage() { // scott
 function loadAddEmployeePage() { // philip
 
 }
+
+function loadRemoveEmployeePage() {
+	
+}
 function loadRoomsPage() { // ismail
 
 }
 function loadExportDataPage() { // raven
-
+	$("#resultDiv").load('exportPage.php');
 }
 function loadPatientsPage() { // philip
 
 }
+
+
 function loadOnCallStatusPage() { // raven
 
 }
