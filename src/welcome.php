@@ -154,7 +154,7 @@ function loadViewUsersPage() { // scott
 function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
 }
-function loadRemoveEmployeePage() {
+function loadRemoveEmployeePage() { // philip
 	$("#resultDiv").load('RemoveEmployee.html');
 }
 function loadRoomsPage() { // ismail
