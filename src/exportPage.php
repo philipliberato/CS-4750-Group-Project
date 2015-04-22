@@ -30,7 +30,7 @@ include('session.php');
 
 $Operation = $_GET["op"];
 
-echo "<p id=\"resultTxt\"> <i>Select Table</i></p>";
+echo "<p id=\"resultTxt\"> <i>Tables</i></p>";
 
 $table_names = array("Administrator", "Appointment", "Department", "Doctor", "Employee", "Medication", "Nurse", "Occupies", "Patient", "Pharmacist", "Receptionist", "Record", "Room", "User");
 
@@ -39,7 +39,7 @@ foreach ($table_names as $value) {
     echo "<input id=\"resultTxt\" type=\"radio\" name=\"RadioTable\" value=\"$value\">$value<br>";
 }
 
-echo "<br><input type=\"submit\" value=\"Get Raw Data\" onclick=\"getRawData();\">";
+echo "<br><input type=\"submit\" value=\"Export\" onclick=\"getRawData();\">";
 echo "</form>";
 
 ?>
@@ -48,6 +48,7 @@ echo "</form>";
 	</div>
 	<div id="e_data" style="float: right; width: 75%; height:90%;">
 		<textarea id="rawData" rows="25" cols="80">Your export data will appear here.</textarea>
+		<?php echo "<br><input type=\"submit\" value=\"Clear\" onclick=\"startOver();\" style=\"float: right; margin-right: 15px;\">"; ?>
 	</div>
 </div>
 
@@ -67,6 +68,14 @@ echo "</form>";
 			oReq.open("get", "getXMLData.php?choice=" + userChose, false);
 			oReq.send();
 		}
+		userChose=userChose.replace(/^(\r\n)|(\n)/,'');
 		$('#rawData').val(userChose);
+	}
+	
+	
+	function startOver() {
+	
+		$('#rawData').val('Your export data will appear here.');
+	
 	}
 </script>
