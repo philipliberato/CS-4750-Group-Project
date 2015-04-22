@@ -16,6 +16,7 @@ $connection = mysqli_connect("stardock.cs.virginia.edu", $admin, "hospital", "cs
         	
 session_start(); // Starting Session
 
+$navOptions = array();
 $first_name = "FirstName";
 $last_name = "LastName";
 
@@ -29,6 +30,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "admin";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$admin_info = mysqli_fetch_row($query);
+	$adminOptions = array("View account", "View Users", "add New Employee", "Remove Employee", "View Rooms", "Export Data");
+	$navOptions = $adminOptions;
 	$first_name = $admin_info[2];
 	$last_name = $admin_info[3];
 	break;
@@ -36,6 +39,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "doctor";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$doctor_info = mysqli_fetch_row($query);
+	$doctorOptions = array("View account", "change password", "my patients", "view on call status");
+	$navOptions = $doctorOptions;
 	$first_name = $doctor_info[2];
 	$last_name = $doctor_info[3];
 	break;
@@ -43,6 +48,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "nurse";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$nurse_info = mysqli_fetch_row($query);
+	$nurseOptions = array("View account", "change password");
+	$navOptions = $nurseOptions;
 	$first_name = $nurse_info[2];
 	$last_name = $nurse_info[3];
 	break;
@@ -50,6 +57,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "pharmacist";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$pharmacist_info = mysqli_fetch_row($query);
+	$pharmacistOptions = array("View account", "change password", "make prescription");
+	$navOptions = $pharmacistOptions;
 	$first_name = $pharmacist_info[2];
 	$last_name = $pharmacist_info[3];
 	break;
@@ -57,6 +66,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "receptionist";
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$receptionist_info = mysqli_fetch_row($query);
+	$receptionistOptions = array("View account", "change password", "check in patient", "check out patient");
+	$navOptions = $receptionistOptions;
 	$first_name = $receptionist_info[2];
 	$last_name = $receptionist_info[3];
 	break;
@@ -64,6 +75,8 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	// echo "patient";
 	$query = mysqli_query($connection, "select * from Patient where userid='$ref_id'");
 	$patient_info = mysqli_fetch_row($query);
+	$patientOptions = array("View account", "change password", "view Available Rooms", "browse On-Call Doctors", "Contact Us");
+	$navOptions = $patientOptions;
 	$first_name = $patient_info[2];
 	$last_name = $patient_info[3];
 	break;
@@ -118,11 +131,12 @@ echo "<div id=\"logo\">General Hospital<a style=\"color:#522402;\">$wordArt</a><
 	        <h4 align="center">How can we help you?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current">View account</a></li>
-					<li><a href="#">change password</a></li>
-					<li><a href="#">view Available Rooms</a></li>
-					<li><a href="#">browse On-Call Doctors</a></li>
-					<li><a href="#">Contact Us</a></li>
+				<?php
+				     foreach($navOptions as $option) {
+					echo "<li><a href=\"#\">$option</a></li>";
+				     }
+				?>
+					<!-- <li id="active"><a href="#" id="current">View account</a></li> -->
 				</ul>
 		</div>
         </div>
