@@ -1,0 +1,52 @@
+<html>
+<head>
+
+	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+
+  $(document).ready(function() {
+      $("#postPerscription").click(function() {
+          $.ajax({
+              url: 'perscriptionpage.php',
+              data: {DrugName: $("#DrugName").val(), FDANumber: $("#FDANumber").val()},
+              success: function(data){
+                  $('#results').html("Drug added successfully");   
+              }
+          });
+      });
+  });
+
+
+  
+  </script>
+
+</head>
+
+<body>
+
+<br>
+
+<h2> Drug Inventory Form </h2>
+<p> Add a drug. </p>
+<br>
+<div class="form-group" id="resultTxt">
+      <label for="DrugName"> Drug Name:  </label>
+      <input type="text" class="form-control" id="DrugName" name="DrugName" placeholder="">
+      <br>
+      <label for="FDANumber"> FDA Number: </label>
+      <input type="text" class="form-control" id="FDANumber" name="FDANumber" placeholder="">
+      <br>
+      <br>
+
+      <button type="button" class="btn btn-default" id="postPerscription">Add Drug To Inventory</button>
+ </div>
+
+ <p id = "results">  </p>
+
+
+    <!-- <p class = "form-group"> Here </p> -->
+
+    </body>
+
+ </html>
