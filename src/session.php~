@@ -13,6 +13,7 @@ session_start();// Starting Session
 // Storing Session
 $user_check=$_SESSION['login_user'];
 $ref_id = $_SESSION['usid'];
+$acct_type = $_SESSION['acct_type'];
 
 
 // SQL Query To Fetch Complete Information Of User

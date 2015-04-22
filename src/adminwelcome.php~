@@ -26,6 +26,17 @@ mysqli_close($connection); // Closing Connection
 <title>Welcome, <?php echo $admin_info[2]; ?></title>
 <link href="admin.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+function loadProfilePage() {
+    $("#resultDiv").load('ProfilePage.php');
+}
+
+function loadExportPage() {
+    $("#resultDiv").load('exportPage.php');
+}
+</script> 
 </head>
 <body>
 
@@ -50,11 +61,12 @@ mysqli_close($connection); // Closing Connection
 	        <h4 align="center">What would you do like today?</h2>
 	        <div id="navcontainer">
 				<ul id="navlist">
-					<li id="active"><a href="#" id="current">View account information</a></li>
-					<li><a href="#">Query Data</a></li>
-					<li><a href="#">Insert Data</a></li>
-					<li><a href="#">Update Data</a></li>
-					<li><a href="#">Delete Data</a></li>
+					<li id="active"><a href="#" id="current" onclick="loadProfilePage();">View account</a></li>
+					<li><a href="#">View Users</a></li>
+					<li><a href="#">add New Employee</a></li>
+					<li><a href="#">Remove Employee</a></li>
+					<li><a href="#">view Rooms</a></li>
+					<li><a href="#" onclick="loadExportPage();">export data</a></li>
 					</ul>
 		</div>
         </div>
@@ -71,7 +83,7 @@ mysqli_close($connection); // Closing Connection
 	        <br><br>
 	        <b id="resultTxt">Phone Number:</b> <?php echo $admin_info[6]; ?>
 	        <br><br>
-	        <b id="resultTxt">Address:</b> <?php echo $admin_info[7]; ?> <?php echo $admin_info[8]; ?>, <?php echo $admin_info[9]; ?>, VA
+	        <b id="resultTxt">Address:</b> <?php echo $admin_info[7]; ?> <?php echo $admin_info[8]; ?>, <?php echo $admin_info[9]; ?>, <?php echo $admin_info[10]; ?> <?php echo $admin_info[11]; ?>
 	        
         </div>
     </div>    

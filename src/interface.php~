@@ -155,6 +155,7 @@ function loadDeletePage() {
 
 		} else {
 		     echo "delete";
+		     //want to be able to delete data here
 		}
 
 	        ?>

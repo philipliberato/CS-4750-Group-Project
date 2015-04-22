@@ -1,4 +1,7 @@
 <?php
+include('session.php');
+
+
 //$AuthorName = "Gandhi";
 
 
@@ -52,10 +55,14 @@ $result = $conn->query($sql);
 
 //echo "$result";
 
+$admin = ($permission == 3);
+$prof = ($permission == 2);
+$reg = ($permission == 1);
+
 if ($result->num_rows > 0) {
 
     if ($Table == "Administrator") {
-	
+
        echo "<table>";
        echo "<tr><th> Employee ID </th><th> Last Login </th></tr>";
        while($row = $result->fetch_assoc()) {
@@ -258,7 +265,6 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-
 
 
 
