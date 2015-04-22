@@ -112,7 +112,7 @@ if($permission == 1) {
      $wordArt = "Admin";
      echo "<link href=\"admin.css\" rel=\"stylesheet\" type=\"text/css\">";
 } elseif($permission == 6) {
-     $wordArt = "Patient";
+     $wordArt = "";
      echo "<link href=\"patient.css\" rel=\"stylesheet\" type=\"text/css\">";
 } else {
      $wordArt = "Professional";
