@@ -204,7 +204,14 @@ if($permission == 1) {
     
     <div id="header-title" class="rounded-topleft6 rounded-topright6">
         <p class="rounded-topleft6 rounded-topright6">
-			<div id="leftHeader">Welcome to General Hospital, <?php echo $first_name; ?>. </div>
+			<div id="leftHeader">Welcome to General Hospital, <?php echo $first_name; ?>. 
+				<?php 
+					if ($permission == 1) {
+						echo "<br>
+			<div style=\"font-size: x-small;\">With great power comes great responsibility. <b style=\"color: red;\">Be careful.</b></div>";
+					}
+				?>
+			</div>
             <div id="rightHeader"><a href="logout.php" id="logout">[Log out]</a></div>
         </p>
     </div>
