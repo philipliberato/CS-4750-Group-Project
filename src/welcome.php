@@ -87,7 +87,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Patient where userid='$ref_id'");
 	$patient_info = mysqli_fetch_row($query);
 	$patientOptions = array("View account", "change password", "view Available Rooms", "browse On-Call Doctors", "Contact Us");
-	$patientLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadAvailableRooms()", "loadOnCall()", "loadContactUs()");
+	$patientLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadAvailableRoomsPage()", "loadOnCallPage()", "loadContactUsPage()");
 	$navOptions = $patientOptions;
 	$navLinks = $patientLinks;
 	$first_name = $patient_info[2];
@@ -166,7 +166,7 @@ function loadPatientsPage() { // philip
 
 
 function loadOnCallStatusPage() { // raven
-
+	$("#resultDiv").load('myStatus.php');
 }
 function loadPerscriptionPage() { // scott
 
@@ -184,7 +184,7 @@ function loadOnCallPage() { // ismail
 
 }
 function loadContactUsPage() { // raven
-
+	$("#resultDiv").load('contactUs.php');
 }
 </script>
 
