@@ -150,7 +150,7 @@ function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
 }
 function loadRemoveEmployeePage() {
-// -----------------------------------------------------------------------------------------------------------------------------------------
+	$("#resultDiv").load('RemoveEmployee.html');
 }
 function loadRoomsPage() { // ismail
 	$("#resultDiv").load('RoomsPage.php');

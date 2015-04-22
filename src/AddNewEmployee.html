@@ -8,8 +8,9 @@
     $(document).ready(function() {
       $("#AddNewEmployee").click(function() {
           $.ajax({
+	      type: 'post',
               url: 'AddNewEmployee.php',
-              data: {RoomNumber: $("#RoomNumber").val()},
+              data: {EmployeeType: $("#EmployeeType").val(), Username: $("#Username").val(), FirstName: $("#FirstName").val(), LastName: $("#LastName").val()},
               success: function(data){
                   $('#results').html(data);   
               }
@@ -17,11 +18,6 @@
       });
   });
 
-
-
-
-
-  
   </script>
 
 </head>
@@ -78,15 +74,18 @@
    -->
 
    <div class="form-group" id="resultTxt">
-      <label for="RoomNumber">Employee Type:</label>
-      <input type="text" class="form-control" id="EmployeeType" name="EmployeeType" placeholder="i.e. Doctor"> <br>
+      <label for="EmployeeType">Employee Type:</label>
+      <input type="radio" id="EmployeeType" name="EmployeeType" value="Doctor">Doctor
+      <input type="radio" id="EmployeeType" name="EmployeeType" value="Pharmacist">Pharmacist
+      <input type="radio" id="EmployeeType" name="EmployeeType" value="Nurse">Nurse
+      <input type="radio" id="EmployeeType" name="EmployeeType" value="Receptionist">Receptionist<br>
       <label for="Username">Username:</label>
       <input type="text" class="form-control" id="Username" name="Username" placeholder="username"> <br>
       <label for="FirstName">First Name:</label>
       <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="first name"> <br>
       <label for="LastName">Last Name:</label>
       <input type="text" class="form-control" id="LastName" name="LastName" placeholder="last name"> <br> <br>
-      <!-- <button type="button" class="btn btn-default" id="AddRoomNumber">Add New Employee</button> -->
+      <!-- date of birth, email, address? -->
      <button type="button" class="btn btn-default" id="AddNewEmployee">Add New Employee</button>
 
    </div>

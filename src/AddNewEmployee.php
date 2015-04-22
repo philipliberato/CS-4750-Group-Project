@@ -42,7 +42,15 @@
 <?php
 //$AuthorName = "Gandhi";
 
-$RoomNumber = $_GET["EmployeeType"];
+$EmployeeType = $_POST["EmployeeType"];
+$Username = $_POST["Username"];
+$FirstName = $_POST["FirstName"];
+$LastName = $_POST["LastName"];
+
+// echo $EmployeeType;
+// echo $Username;
+// echo $FirstName;
+// echo $LastName;
 
 $con=mysqli_connect('stardock.cs.virginia.edu', 'cs4750pnl8zp', 'hospital', 'cs4750pnl8zp');
 // Check connection
@@ -55,8 +63,21 @@ if (mysqli_connect_errno()) {
 $status = NULL;
 $message = "Operation was not successful";
 
-if ($RoomNumber != NULL){
-$status = mysqli_query($con,"INSERT INTO Room (RoomNumber) VALUES ('$RoomNumber')");
+if ($EmployeeType != NULL && $Username != ""){
+$status = mysqli_query($con,"INSERT INTO User (Username) VALUES ('$Username')");
+	if($status) {
+		$UserID = mysqli_query($con,"SELECT * FROM User WHERE Username = '$Username'");
+		$UserID = mysqli_fetch_row($UserID);
+		echo $UserID[1];
+		$status = $status && mysqli_query($con,"INSERT INTO Employee (UserID, FirstName, LastName) VALUES ('$UserID[1]', '$FirstName', '$LastName')");
+
+		if($status) {
+		$EmployeeID = mysqli_query($con,"SELECT * FROM Employee WHERE UserID = '$UserID[1]'");
+		$EmployeeID = mysqli_fetch_row($EmployeeID);
+		echo $EmployeeID[0];
+		$status = $status && mysqli_query($con,"INSERT INTO $EmployeeType (EmployeeID) VALUES ('$EmployeeID[0]')");
+		}
+	}
 }
 
 if($status) { // query was successfull

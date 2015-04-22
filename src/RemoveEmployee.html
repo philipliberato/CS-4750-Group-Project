@@ -1,0 +1,46 @@
+<html>
+<head>
+
+	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+
+    $(document).ready(function() {
+      $("#RemoveEmployee").click(function() {
+          $.ajax({
+	      type: 'post',
+              url: 'RemoveEmployee.php',
+              data: {Username: $("#Username").val()},
+              success: function(data){
+                  $('#results').html(data);   
+              }
+          });
+      });
+  });
+
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+<div class="form-group" id="results">
+
+     <h3 id="resultTxt"> Remove User From the System </h3>
+
+
+   <div class="form-group" id="resultTxt">
+      <label for="Username">Username:</label>
+      <input type="text" class="form-control" id="Username" name="Username" placeholder="username"> <br>
+     <button type="button" class="btn btn-default" id="RemoveEmployee">Remove User</button>
+
+   </div>
+
+</div>
+
+    </body>
+
+ </html>
