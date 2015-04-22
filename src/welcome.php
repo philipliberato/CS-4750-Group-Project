@@ -173,7 +173,7 @@ function loadPerscriptionPage() { // scott
 	$("#resultDiv").load('perscriptionpage.html');
 }
 function loadCheckInPage() { // ismail
-// -----------------------------------------------------------------------------------------------------------------------------------------
+	$("#resultDiv").load('CheckinPage.html');
 }
 function loadCheckOutPage() { // ismail
 	$("#resultDiv").load('CheckoutPage.html');
