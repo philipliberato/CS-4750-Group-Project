@@ -143,21 +143,17 @@ function loadDeletePage() {
 function loadChangeInfoPage() {
     $("#resultDiv").load('ChangePassword.html');
 }
-
-// -------------------------------------------------------------------------------------------------
-
 function loadViewUsersPage() { // scott
-
+// -----------------------------------------------------------------------------------------------------------------------------------------
 }
 function loadAddEmployeePage() { // philip
 	$("#resultDiv").load('AddNewEmployee.html');
 }
-
 function loadRemoveEmployeePage() {
-	
+// -----------------------------------------------------------------------------------------------------------------------------------------
 }
 function loadRoomsPage() { // ismail
-
+	$("#resultDiv").load('RoomsPage.php');
 }
 function loadExportDataPage() { // raven
 	$("#resultDiv").load('exportPage.php');
@@ -165,25 +161,23 @@ function loadExportDataPage() { // raven
 function loadPatientsPage() { // philip
 	$("#resultDiv").load('PatientsPage.php');
 }
-
-
 function loadOnCallStatusPage() { // raven
 	$("#resultDiv").load('myStatus.php');
 }
 function loadPerscriptionPage() { // scott
-
+// -----------------------------------------------------------------------------------------------------------------------------------------
 }
 function loadCheckInPage() { // ismail
-
+// -----------------------------------------------------------------------------------------------------------------------------------------
 }
 function loadCheckOutPage() { // ismail
-
+	$("#resultDiv").load('CheckoutPage.html');
 }
 function loadAvailableRoomsPage() { // philip
 	$("#resultDiv").load('AvailableRoomsPage.php');
 }
 function loadOnCallPage() { // ismail
-
+	$("#resultDiv").load('OnCallPage.php');
 }
 function loadContactUsPage() { // raven
 	$("#resultDiv").load('contactUs.php');
