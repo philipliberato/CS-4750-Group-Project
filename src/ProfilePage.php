@@ -32,6 +32,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$admin_info = mysqli_fetch_row($query);
 	$adminOptions = array("View account", "View Users", "add New Employee", "Remove Employee", "View Rooms", "Export Data");
+	$adminLinks = array("loadProfilePage()", "loadViewUsersPage()", "loadAddEmployeePage()", "loadRoomsPage()", "loadExportDataPage()");
 	$navOptions = $adminOptions;
 	$first_name = $admin_info[2];
 	$last_name = $admin_info[3];
@@ -41,6 +42,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$doctor_info = mysqli_fetch_row($query);
 	$doctorOptions = array("View account", "change password", "my patients", "view on call status");
+	$doctorLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadPatientsPage()", "loadOnCallStatusPage()");
 	$navOptions = $doctorOptions;
 	$first_name = $doctor_info[2];
 	$last_name = $doctor_info[3];
@@ -50,6 +52,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$nurse_info = mysqli_fetch_row($query);
 	$nurseOptions = array("View account", "change password");
+	$nurseLinks = array("loadProfilePage()", "loadChangeInfoPage()");
 	$navOptions = $nurseOptions;
 	$first_name = $nurse_info[2];
 	$last_name = $nurse_info[3];
@@ -59,6 +62,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$pharmacist_info = mysqli_fetch_row($query);
 	$pharmacistOptions = array("View account", "change password", "make prescription");
+	$pharmacistLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadPerscriptionPage()");
 	$navOptions = $pharmacistOptions;
 	$first_name = $pharmacist_info[2];
 	$last_name = $pharmacist_info[3];
@@ -68,6 +72,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Employee where userid='$ref_id'");
 	$receptionist_info = mysqli_fetch_row($query);
 	$receptionistOptions = array("View account", "change password", "check in patient", "check out patient");
+	$receptionistLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadCheckInPage()", "loadCheckOutPage()");
 	$navOptions = $receptionistOptions;
 	$first_name = $receptionist_info[2];
 	$last_name = $receptionist_info[3];
@@ -77,7 +82,7 @@ switch($permission) { // need to change some of the user IDs to employee IDs
 	$query = mysqli_query($connection, "select * from Patient where userid='$ref_id'");
 	$patient_info = mysqli_fetch_row($query);
 	$patientOptions = array("View account", "change password", "view Available Rooms", "browse On-Call Doctors", "Contact Us");
-	$patientLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadAvailableRooms()", "loadOnCall()", "loadContactUs()");
+	$patientLinks = array("loadProfilePage()", "loadChangeInfoPage()", "loadAvailableRoomsPage()", "loadOnCallPage()", "loadContactUsPage()");
 	$navOptions = $patientOptions;
 	$navLinks = $patientLinks;
 	$first_name = $patient_info[2];
