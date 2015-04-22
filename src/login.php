@@ -45,20 +45,50 @@ if (isset($_POST['submit'])) {
 				
 				if ($a_row == 1) {
 					//we found an admin!
-					$_SESSION['acct_type'] = 3;
-					header("location: adminwelcome.php");
+					$_SESSION['acct_type'] = 1;
+					// header("location: adminwelcome.php");
+					header("location: welcome.php");
 					exit;
 				}
 				else {
-					//just a boring employee
-					$_SESSION['acct_type'] = 2;
-	   			 	header("location: professionalwelcome.php");
+					$eid = $e_info[0];
+
+					// doctor
+					$doctor_chk = mysqli_query($connection, "select * from Doctor where EmployeeID='$eid'");
+		   			$is_d = mysqli_num_rows($doctor_chk);
+
+					// nurse
+					$nurse_chk = mysqli_query($connection, "select * from Nurse where EmployeeID='$eid'");
+		   			$is_n = mysqli_num_rows($nurse_chk);
+
+					// pharmacist
+					$pharmacist_chk = mysqli_query($connection, "select * from Pharmacist where EmployeeID='$eid'");
+		   			$is_p = mysqli_num_rows($pharmacist_chk);
+
+					// receptionist
+					$receptionist_chk = mysqli_query($connection, "select * from Receptionist where EmployeeID='$eid'");
+		   			$is_r = mysqli_num_rows($receptionist_chk);
+
+					if($is_d == 1) {
+					     $_SESSION['acct_type'] = 2;
+					} elseif($is_n == 1) {
+					     $_SESSION['acct_type'] = 3;
+					} elseif($is_p == 1) {
+					     $_SESSION['acct_type'] = 4;
+					} elseif($is_r == 1) {
+					     $_SESSION['acct_type'] = 5;
+					} else {
+					     $_SESSION['acct_type'] = 0;
+					}
+
+					header("location: welcome.php");
 	   			 	exit;
 				}
 			}
 			else {
 				//user is just a regular user
-				$_SESSION['acct_type'] = 1;	
+				// patient
+				$_SESSION['acct_type'] = 6;	
 				header("location: welcome.php"); 
 				exit; 
 			}

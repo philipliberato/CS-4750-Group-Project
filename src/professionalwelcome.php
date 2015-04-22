@@ -16,7 +16,6 @@ $employee_info = mysqli_fetch_row($query);
 
 mysqli_close($connection); // Closing Connection
 
-
 ?>
 <!DOCTYPE html>
 <html>
