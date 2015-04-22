@@ -22,7 +22,7 @@ include('session.php');
   </head>
   <body>
 
-          <a id= "menu" href="signin.php">[Home]</a> <a id="menu" href="logout.php">[Logout]</a>
+          <a id= "menu" href="welcome.php">[Home]</a> <a id="menu" href="logout.php">[Logout]</a>
 
     <div class="container">
 
